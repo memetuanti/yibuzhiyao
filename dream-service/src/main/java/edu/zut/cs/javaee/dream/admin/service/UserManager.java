@@ -1,12 +1,12 @@
 package edu.zut.cs.javaee.dream.admin.service;
 
-import java.util.List;
-
 import edu.zut.cs.javaee.dream.admin.domain.User;
+
+import java.util.List;
 
 public interface UserManager {
 
-	List<User> findAll();
+    List<User> findAll();
 
-	User findbyUsername(String username);
+    User findbyUsername(String username);
 }

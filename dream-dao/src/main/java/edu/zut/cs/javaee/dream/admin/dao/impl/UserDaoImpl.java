@@ -5,11 +5,11 @@ import edu.zut.cs.javaee.dream.admin.domain.User;
 
 public class UserDaoImpl implements UserDao {
 
-	@Override
-	public User getByUsername(String username) {
-		User user = new User();
-		user.setUsername(username);
-		return user;
-	}
+    @Override
+    public User getByUsername(String username) {
+        User user = new User();
+        user.setUsername(username);
+        return user;
+    }
 
 }

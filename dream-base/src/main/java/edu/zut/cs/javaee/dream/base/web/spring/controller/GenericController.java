@@ -1,13 +1,9 @@
-package edu.zut.cs.software.base.web.spring.controller;
+package edu.zut.cs.javaee.dream.base.web.spring.controller;
 
 import java.io.IOException;
 import java.io.Serializable;
 import java.util.Date;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-
-import org.apache.commons.lang3.StringUtils;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
@@ -19,10 +15,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import edu.zut.cs.software.base.domain.BaseEntityDomain;
-import edu.zut.cs.software.base.service.GenericManager;
+import edu.zut.cs.javaee.dream.base.domain.BaseEntity;
+import edu.zut.cs.javaee.dream.base.service.GenericManager;
 
-public abstract class GenericController<T extends BaseEntityDomain, PK extends Serializable, M extends GenericManager<T, PK>>
+public abstract class GenericController<T extends BaseEntity, PK extends Serializable, M extends GenericManager<T, PK>>
 		extends BaseController {
 	protected M manager;
 	protected PK id;
@@ -32,8 +28,7 @@ public abstract class GenericController<T extends BaseEntityDomain, PK extends S
 	protected int pageNumber = 0;
 	protected int pageSize = 20;
 
-	protected Pageable pageable = new PageRequest(pageNumber, pageSize,
-			new Sort(Direction.ASC, "id"));
+	protected Pageable pageable = PageRequest.of(pageNumber, pageSize, new Sort(Direction.ASC, "id"));
 
 	/**
 	 * 根据输入的实体对象，创建一个新的实体对象
@@ -61,33 +56,22 @@ public abstract class GenericController<T extends BaseEntityDomain, PK extends S
 	@RequestMapping(value = "/{id}", method = RequestMethod.DELETE, produces = "application/json")
 	@ResponseBody
 	public void delete(@PathVariable PK id) throws IOException {
-
 		this.manager.delete(id);
 	}
 
 	/**
-	 * 根据输入，返回分页结果中的当前页，包括当前页信息和其中的实体对象集合
+	 * * 根据输入，返回分页结果中的当前页，包括当前页信息和其中的实体对象集合
 	 * 
-	 * @param request
-	 * @param response
+	 * @param page_number
+	 * @param page_limit
 	 * @return
 	 */
-	// 1
-	@RequestMapping(value = "/", method = RequestMethod.GET, produces = "application/json")
+	@RequestMapping(value = "/{page_number}", method = RequestMethod.GET, produces = "application/json")
 	@ResponseBody
-	public Page<T> get(HttpServletRequest request, HttpServletResponse response) {
-		String page = request.getParameter("page");
-		String limit = request.getParameter("limit");
-		if (StringUtils.isNotBlank(page)) {
-			this.pageNumber = Integer.valueOf(page) - 1;
-		} else {
-			this.pageNumber = 0;
-		}
-		if (StringUtils.isNotBlank(limit)) {
-			this.pageSize = Integer.valueOf(limit);
-		}
-		this.pageable = new PageRequest(this.pageNumber, this.pageSize,
-				new Sort(Direction.ASC, "id"));
+	public Page<T> get(@PathVariable int pageNumber, @PathVariable int pageSize) {
+		this.pageNumber = pageNumber;
+		this.pageSize = pageSize;
+		this.pageable = PageRequest.of(this.pageNumber, this.pageSize, new Sort(Direction.ASC, "id"));
 		this.page = this.manager.findAll(this.pageable);
 		logger.info(this.page);
 		return this.page;

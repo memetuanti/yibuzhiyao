@@ -5,7 +5,7 @@ import java.util.List;
 
 import org.springframework.data.repository.NoRepositoryBean;
 
-import edu.zut.cs.javaee.dream.base.domain.BaseTreeEntityDomain;
+import edu.zut.cs.javaee.dream.base.domain.BaseTreeEntity;
 
 /**
  * Generic Tree DAO (Data Access Object) with common methods to CRUD POJOs.
@@ -21,7 +21,7 @@ import edu.zut.cs.javaee.dream.base.domain.BaseTreeEntityDomain;
  *            the primary key for that type，实体类Id
  */
 @NoRepositoryBean
-public abstract interface GenericTreeDao<T extends BaseTreeEntityDomain<T>, PK extends Serializable>
+public abstract interface GenericTreeDao<T extends BaseTreeEntity<T>, PK extends Serializable>
 		extends GenericDao<T, PK> {
 	List<T> getRoot();
 }

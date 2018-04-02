@@ -6,7 +6,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 import org.springframework.data.repository.NoRepositoryBean;
 
-import edu.zut.cs.javaee.dream.base.domain.BaseEntityDomain;
+import edu.zut.cs.javaee.dream.base.domain.BaseEntity;
 
 /**
  * Generic DAO (Data Access Object) with common methods to CRUD POJOs.
@@ -22,6 +22,6 @@ import edu.zut.cs.javaee.dream.base.domain.BaseEntityDomain;
  *            the primary key for that type，Entity Id
  */
 @NoRepositoryBean
-public interface GenericDao<T extends BaseEntityDomain, PK extends Serializable>
+public interface GenericDao<T extends BaseEntity, PK extends Serializable>
 		extends JpaRepository<T, PK>, JpaSpecificationExecutor<T> {
 }

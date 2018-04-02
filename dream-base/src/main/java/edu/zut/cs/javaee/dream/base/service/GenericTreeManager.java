@@ -3,7 +3,7 @@ package edu.zut.cs.javaee.dream.base.service;
 import java.io.Serializable;
 import java.util.List;
 
-import edu.zut.cs.javaee.dream.base.domain.BaseTreeEntityDomain;
+import edu.zut.cs.javaee.dream.base.domain.BaseTreeEntity;
 
 /**
  * Generic Manager that talks to GenericDao to CRUD POJOs.
@@ -19,7 +19,7 @@ import edu.zut.cs.javaee.dream.base.domain.BaseTreeEntityDomain;
  *            the primary key for that type
  */
 @SuppressWarnings("rawtypes")
-public interface GenericTreeManager<T extends BaseTreeEntityDomain, PK extends Serializable>
+public interface GenericTreeManager<T extends BaseTreeEntity, PK extends Serializable>
 		extends GenericManager<T, PK> {
 
 	/**

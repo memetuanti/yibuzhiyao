@@ -1,24 +1,33 @@
 package edu.zut.cs.javaee.dream.admin.domain;
 
-public class User {
+import javax.persistence.Table;
 
-    String username;
-    String password;
+import edu.zut.cs.javaee.dream.base.domain.BaseEntity;
 
-    public String getUsername() {
-        return username;
-    }
+@Table(name="T_USER")
+public class User extends BaseEntity {
 
-    public void setUsername(String username) {
-        this.username = username;
-    }
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	String username;
+	String password;
 
-    public String getPassword() {
-        return password;
-    }
+	public String getUsername() {
+		return username;
+	}
 
-    public void setPassword(String password) {
-        this.password = password;
-    }
+	public void setUsername(String username) {
+		this.username = username;
+	}
+
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
 
 }

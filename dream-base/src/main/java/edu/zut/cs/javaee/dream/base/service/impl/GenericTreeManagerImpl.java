@@ -7,7 +7,7 @@ import java.util.List;
 import org.springframework.transaction.annotation.Transactional;
 
 import edu.zut.cs.javaee.dream.base.dao.GenericTreeDao;
-import edu.zut.cs.javaee.dream.base.domain.BaseTreeEntityDomain;
+import edu.zut.cs.javaee.dream.base.domain.BaseTreeEntity;
 import edu.zut.cs.javaee.dream.base.service.GenericTreeManager;
 
 /**
@@ -26,7 +26,7 @@ import edu.zut.cs.javaee.dream.base.service.GenericTreeManager;
  *            the primary key for that type
  */
 @Transactional
-public class GenericTreeManagerImpl<T extends BaseTreeEntityDomain<T>, PK extends Serializable>
+public class GenericTreeManagerImpl<T extends BaseTreeEntity<T>, PK extends Serializable>
 		extends GenericManagerImpl<T, PK> implements GenericTreeManager<T, PK> {
 
 	protected GenericTreeDao<T, PK> treeDao;

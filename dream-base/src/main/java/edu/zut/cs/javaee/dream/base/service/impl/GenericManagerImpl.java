@@ -8,7 +8,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.transaction.annotation.Transactional;
 
 import edu.zut.cs.javaee.dream.base.dao.GenericDao;
-import edu.zut.cs.javaee.dream.base.domain.BaseEntityDomain;
+import edu.zut.cs.javaee.dream.base.domain.BaseEntity;
 import edu.zut.cs.javaee.dream.base.service.GenericManager;
 
 /**
@@ -27,7 +27,7 @@ import edu.zut.cs.javaee.dream.base.service.GenericManager;
  *            the primary key for that type
  */
 @Transactional
-public class GenericManagerImpl<T extends BaseEntityDomain, PK extends Serializable>
+public class GenericManagerImpl<T extends BaseEntity, PK extends Serializable>
 		implements GenericManager<T, PK> {
 
 	protected GenericDao<T, PK> dao;

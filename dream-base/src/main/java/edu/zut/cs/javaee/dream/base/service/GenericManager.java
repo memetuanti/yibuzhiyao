@@ -6,7 +6,7 @@ import java.util.List;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
-import edu.zut.cs.javaee.dream.base.domain.BaseEntityDomain;
+import edu.zut.cs.javaee.dream.base.domain.BaseEntity;
 
 /**
  * Generic Manager that talks to GenericDao to CRUD POJOs.
@@ -21,7 +21,7 @@ import edu.zut.cs.javaee.dream.base.domain.BaseEntityDomain;
  * @param <PK>
  *            the primary key for that type
  */
-public interface GenericManager<T extends BaseEntityDomain, PK extends Serializable> {
+public interface GenericManager<T extends BaseEntity, PK extends Serializable> {
 
 	/**
 	 * 

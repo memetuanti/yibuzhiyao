@@ -18,8 +18,8 @@ import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 @MappedSuperclass
-public class BaseTreeEntityDomain<T extends BaseTreeEntityDomain<T>> extends
-		BaseEntityDomain {
+public class BaseTreeEntity<T extends BaseTreeEntity<T>> extends
+		BaseEntity {
 
 	/**
 	 * 

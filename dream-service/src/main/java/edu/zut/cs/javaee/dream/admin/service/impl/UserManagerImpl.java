@@ -7,9 +7,10 @@ import org.springframework.stereotype.Component;
 
 import edu.zut.cs.javaee.dream.admin.domain.User;
 import edu.zut.cs.javaee.dream.admin.service.UserManager;
+import edu.zut.cs.javaee.dream.base.service.impl.GenericManagerImpl;
 
 @Component
-public class UserManagerImpl implements UserManager {
+public class UserManagerImpl extends GenericManagerImpl<User, Long> implements UserManager {
 
 	@Override
 	public User findbyUsername(String username) {

@@ -12,7 +12,6 @@ public abstract class GenericTreeManagerTestCase<PK extends Serializable, T exte
 
 	public GenericTreeManagerTestCase(Class<T> persistentClass) {
 		super(persistentClass);
-		// TODO Auto-generated constructor stub
 	}
 
 	@Test

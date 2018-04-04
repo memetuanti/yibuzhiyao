@@ -8,4 +8,11 @@
     </parent>
     <artifactId>dream-web</artifactId>
     <packaging>war</packaging>
+    <dependencies>
+    	<dependency>
+    		<groupId>edu.zut.cs.javaee</groupId>
+    		<artifactId>dream-service</artifactId>
+    		<version>0.0.1-SNAPSHOT</version>
+    	</dependency>
+    </dependencies>
 </project>

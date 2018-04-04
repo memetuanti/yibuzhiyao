@@ -4,10 +4,13 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import edu.zut.cs.javaee.dream.base.domain.BaseEntity;
 
 @Table(name = "T_ADMIN_USER")
 @Entity
+
 public class User extends BaseEntity {
 
 	/**

@@ -59,15 +59,15 @@ public abstract class GenericController<T extends BaseEntity, PK extends Seriali
 
 	/**
 	 * 
-	 * @param page_number
-	 * @param page_limit
+	 * @param pageNumber
+	 * @param pageSize
 	 * @return
 	 */
-	@RequestMapping(value = "/{page_number}", method = RequestMethod.GET, produces = "application/json")
+	@RequestMapping(value = "/page/", method = RequestMethod.GET, produces = "application/json")
 	@ResponseBody
-	public Page<T> get(@PathVariable int pageNumber, @PathVariable int pageSize) {
-		this.pageNumber = pageNumber;
-		this.pageSize = pageSize;
+	public Page<T> get(@PathVariable String pageNumber, @PathVariable String pageSize) {
+		this.pageNumber = Integer.valueOf(pageNumber);
+		this.pageSize = Integer.valueOf(pageSize);
 		this.pageable = PageRequest.of(this.pageNumber, this.pageSize, new Sort(Direction.ASC, "id"));
 		this.page = this.manager.findAll(this.pageable);
 		logger.info(this.page);
@@ -81,7 +81,7 @@ public abstract class GenericController<T extends BaseEntity, PK extends Seriali
 	 */
 	@RequestMapping(value = "/{id}", method = RequestMethod.GET, produces = "application/json")
 	@ResponseBody
-	public T get(@PathVariable PK id) {
+	public T getOne(@PathVariable PK id) {
 		return this.manager.findById(id);
 
 	}

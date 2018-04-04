@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import edu.zut.cs.javaee.dream.base.domain.BaseEntity;
@@ -65,7 +66,7 @@ public abstract class GenericController<T extends BaseEntity, PK extends Seriali
 	 */
 	@RequestMapping(value = "/page/", method = RequestMethod.GET, produces = "application/json")
 	@ResponseBody
-	public Page<T> get(@PathVariable String pageNumber, @PathVariable String pageSize) {
+	public Page<T> get(@RequestParam("pageNumber") String pageNumber, @RequestParam("pageSize") String pageSize) {
 		this.pageNumber = Integer.valueOf(pageNumber);
 		this.pageSize = Integer.valueOf(pageSize);
 		this.pageable = PageRequest.of(this.pageNumber, this.pageSize, new Sort(Direction.ASC, "id"));

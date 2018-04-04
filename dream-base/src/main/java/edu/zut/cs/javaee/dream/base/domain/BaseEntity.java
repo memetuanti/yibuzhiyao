@@ -42,7 +42,6 @@ public class BaseEntity extends BaseDomain {
 	@Column(name = "ENTITY_NAME")
 	protected String entityName;
 
-	
 	@Id
 	@Column(name = "ID")
 	@GeneratedValue(strategy = GenerationType.AUTO)
@@ -67,6 +66,14 @@ public class BaseEntity extends BaseDomain {
 
 	public Date getDateModified() {
 		return dateModified;
+	}
+
+	public Boolean getDeleted() {
+		return deleted;
+	}
+
+	public String getEntityName() {
+		return entityName;
 	}
 
 	public Long getId() {
@@ -97,14 +104,17 @@ public class BaseEntity extends BaseDomain {
 		this.deleted = deleted;
 	}
 
+	public void setEntityName(String entityName) {
+		this.entityName = entityName;
+	}
+
 	public void setId(Long id) {
 		this.id = id;
 	}
 
 	@Override
 	public String toString() {
-		return ToStringBuilder.reflectionToString(this,
-				ToStringStyle.MULTI_LINE_STYLE);
+		return ToStringBuilder.reflectionToString(this, ToStringStyle.MULTI_LINE_STYLE);
 	}
 
 }

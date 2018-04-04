@@ -1,21 +1,29 @@
 package edu.zut.cs.javaee.dream.admin.dao;
 
+import static org.junit.Assert.assertEquals;
+
+import java.util.List;
+
 import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.springframework.test.context.ContextConfiguration;
-import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import org.springframework.beans.factory.annotation.Autowired;
 
-import edu.zut.cs.javaee.dream.DaoConfig;
+import edu.zut.cs.javaee.dream.admin.domain.Role;
+import edu.zut.cs.javaee.dream.base.dao.GenericDaoTestCase;
 
-import static org.junit.Assert.fail;
+public class RoleDaoTest extends GenericDaoTestCase<Long, Role, RoleDao> {
 
-@RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(classes = DaoConfig.class)
-class RoleDaoTest {
+	@Autowired
+	RoleDao roleDao;
 
-    @Test
-    void test() {
-        fail("Not yet implemented");
-    }
+	@Test
+	public void test() {
+		Role r = new Role();
+		r.setName("test_role");
+		Role test_role = this.roleDao.save(r);
+		Long role_id = test_role.getId();
+		Role result = this.roleDao.getOne(role_id);
+		assertEquals(test_role, result);
+		List<Role> all = this.roleDao.findAll();
+	}
 
 }

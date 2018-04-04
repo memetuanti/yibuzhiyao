@@ -9,8 +9,7 @@ import org.springframework.test.context.ContextConfiguration;
 import edu.zut.cs.javaee.dream.base.BaseAbstractTestCase;
 import edu.zut.cs.javaee.dream.base.domain.BaseEntity;
 
-@ContextConfiguration(locations = {
-		"classpath:/applicationContextTest-resources.xml",
+@ContextConfiguration(locations = { "classpath:/applicationContextTest-resources.xml",
 		"classpath:/applicationContext-dao.xml" })
 public class GenericDaoTestCase<PK extends Serializable, T extends BaseEntity, D extends GenericDao<T, PK>>
 		extends BaseAbstractTestCase {

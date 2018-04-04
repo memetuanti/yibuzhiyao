@@ -31,7 +31,6 @@ public abstract class GenericController<T extends BaseEntity, PK extends Seriali
 	protected Pageable pageable = PageRequest.of(pageNumber, pageSize, new Sort(Direction.ASC, "id"));
 
 	/**
-	 * 根据输入的实体对象，创建一个新的实体对象
 	 * 
 	 * @param model
 	 * @return
@@ -48,7 +47,6 @@ public abstract class GenericController<T extends BaseEntity, PK extends Seriali
 	}
 
 	/**
-	 * 根据指定id，删除实体对象
 	 * 
 	 * @param id
 	 * @throws IOException
@@ -60,7 +58,6 @@ public abstract class GenericController<T extends BaseEntity, PK extends Seriali
 	}
 
 	/**
-	 * * 根据输入，返回分页结果中的当前页，包括当前页信息和其中的实体对象集合
 	 * 
 	 * @param page_number
 	 * @param page_limit
@@ -78,7 +75,6 @@ public abstract class GenericController<T extends BaseEntity, PK extends Seriali
 	}
 
 	/**
-	 * 根据指定的id，获取实体对象
 	 * 
 	 * @param id
 	 * @return
@@ -91,7 +87,6 @@ public abstract class GenericController<T extends BaseEntity, PK extends Seriali
 	}
 
 	/**
-	 * 根据输入的实体对象信息，修改指定id的实体对象
 	 * 
 	 * @param id
 	 * @param model

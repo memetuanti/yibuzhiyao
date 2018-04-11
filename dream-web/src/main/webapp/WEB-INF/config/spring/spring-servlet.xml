@@ -37,7 +37,7 @@
 
 	<!-- 自动搜索@Controller标注的类 -->
 	<context:component-scan
-		base-package="edu.zut.cs.javaee.**.controller" />
+		base-package="edu.zut.cs.javaee.dream.**.controller" />
 
 	<bean
 		class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping" />

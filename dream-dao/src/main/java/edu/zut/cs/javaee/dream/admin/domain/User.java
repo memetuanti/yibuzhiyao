@@ -2,15 +2,14 @@ package edu.zut.cs.javaee.dream.admin.domain;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
-
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import edu.zut.cs.javaee.dream.base.domain.BaseEntity;
 
 @Table(name = "T_ADMIN_USER")
 @Entity
-
 public class User extends BaseEntity {
 
 	/**
@@ -26,6 +25,18 @@ public class User extends BaseEntity {
 
 	@Column(name = "EMAIL")
 	String email;
+
+	public Group getGroup() {
+		return group;
+	}
+
+	public void setGroup(Group group) {
+		this.group = group;
+	}
+
+	@ManyToOne
+	@JoinColumn(name = "GROUP_ID")
+	Group group;
 
 	public String getUsername() {
 		return username;

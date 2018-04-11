@@ -1,9 +1,14 @@
 package edu.zut.cs.javaee.dream.admin.domain;
 
+import java.util.Set;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 import edu.zut.cs.javaee.dream.base.domain.BaseTreeEntity;
@@ -20,6 +25,9 @@ public class Group extends BaseTreeEntity<Group> {
 
 	@Column(name = "NAME")
 	String name;
+
+	@OneToMany(mappedBy = "group", cascade = CascadeType.REMOVE, fetch = FetchType.EAGER)
+	Set<User> users;
 
 	public String getName() {
 		return name;

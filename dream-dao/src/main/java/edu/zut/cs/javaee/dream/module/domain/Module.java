@@ -17,4 +17,24 @@ public class Module extends BaseTreeEntity<Module> {
 	 */
 	private static final long serialVersionUID = 1945866957570000331L;
 
+	String description;
+
+	String name;
+
+	public String getDescription() {
+		return description;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
 }

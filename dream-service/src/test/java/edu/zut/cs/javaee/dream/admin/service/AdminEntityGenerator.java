@@ -24,7 +24,7 @@ public class AdminEntityGenerator extends GenericGenerator {
 			Group g = new Group();
 			g.setName("group_" + i);
 			this.groupManager.save(g);
-			for (int j = 0; i < 10; i++) {
+			for (int j = 0; j < 10; j++) {
 				Group group = new Group();
 				group.setName("group_" + i + "_" + j);
 				group.setParent(g);

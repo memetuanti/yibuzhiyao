@@ -1,10 +1,11 @@
 package edu.zut.cs.javaee.dream.customer.service;
 
-import edu.zut.cs.javaee.dream.admin.domain.User;
-
 import java.util.List;
 
-public interface CustomerManager {
+import edu.zut.cs.javaee.dream.base.service.GenericManager;
+import edu.zut.cs.javaee.dream.customer.domain.Customer;
+
+public interface CustomerManager extends GenericManager<Customer, Long> {
 
     /**
      * get customers according to postcode
@@ -12,5 +13,5 @@ public interface CustomerManager {
      * @param postcode
      * @return
      */
-    List<User> findByPostcode(String postcode);
+    List<Customer> findByPostcode(String postcode);
 }

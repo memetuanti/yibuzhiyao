@@ -37,7 +37,7 @@
 					<vendor>hibernate</vendor>
 					<packageToScan>edu.zut.cs.javaee.dream</packageToScan>
 					<jdbcDriver>com.mysql.jdbc.Driver</jdbcDriver>
-					<jdbcUrl>jdbc:mysql://202.196.37.91:3306/course</jdbcUrl>
+					<jdbcUrl>jdbc:mysql://202.196.37.91:3306/yibuzhiyao</jdbcUrl>
 					<jdbcUser>zutnlp</jdbcUser>
 					<jdbcPassword>zutnlp</jdbcPassword>
 					<hibernate.dialect>org.hibernate.dialect.MySQL5InnoDBDialect</hibernate.dialect>

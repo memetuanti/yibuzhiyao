@@ -88,7 +88,7 @@ public class BaseEntity extends BaseDomain {
 		if (this.id == null) {
 			this.id = Long.valueOf(0);
 		}
-		return HashCodeBuilder.reflectionHashCode(this.id);
+		return   HashCodeBuilder.reflectionHashCode(this.id);
 	}
 
 	public Boolean isDeleted() {

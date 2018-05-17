@@ -26,7 +26,7 @@ public class BaseTreeEntity<T extends BaseTreeEntity<T>> extends
 	 */
 	private static final long serialVersionUID = -5961264427451119166L;
 
-	@JsonManagedReference("parent-children")
+	@JsonManagedReference("parent-children")//
 	@OneToMany(mappedBy = "parent", cascade = CascadeType.REMOVE, fetch = FetchType.EAGER)
 	List<T> children;
 

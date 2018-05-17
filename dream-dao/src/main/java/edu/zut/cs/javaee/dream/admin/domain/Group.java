@@ -16,6 +16,8 @@ import edu.zut.cs.javaee.dream.base.domain.BaseTreeEntity;
 @Table(name = "T_ADMIN_GROUP")
 @Entity
 @NamedQueries({ @NamedQuery(name = "Group.getRoot", query = "select g from Group g where g.parent is null") })
+//命名查询
+
 public class Group extends BaseTreeEntity<Group> {
 
 	/**

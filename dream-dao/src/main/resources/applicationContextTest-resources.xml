@@ -13,6 +13,7 @@
 	http://www.springframework.org/schema/task/spring-task.xsd
 	http://www.springframework.org/schema/data/jpa
 	http://www.springframework.org/schema/data/jpa/spring-jpa.xsd">
+	<!-- 属性配置， -->
 	<bean id="propertyConfigurer"
 		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
 		<property name="ignoreUnresolvablePlaceholders" value="true" />
@@ -23,8 +24,8 @@
 		</property>
 	</bean>
 
-	<!-- JNDI DataSource for J2EE environments -->
-	<!-- <jee:jndi-lookup id="dataSource" jndi-name="java:comp/env/jdbc/appfuse"/> -->
+	<!-- JNDI DataSource for J2EE environments  创建一个由class属性指定的类的实例，然后把它绑定到其名字由id属性给出的变量上”。 -->
+	<!-- <jee:jndi-lookup id="dataSource" jndi-name="java:comp/env/jdbc/appfuse"，使用数据源配置到spring中/> -->
 	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"
 		destroy-method="close">
 		<property name="driverClassName" value="${jdbc.driver_class}" />

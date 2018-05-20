@@ -1,32 +1,27 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <parent>
-    <groupId>edu.cn.cs.software</groupId>
+    <groupId>edu.zut.cs.software.yibuzhiyao</groupId>
     <artifactId>yibuzhiyao</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
   <artifactId>yibuzhiyao-dao</artifactId>
   <dependencies>
-  	<!-- https://mvnrepository.com/artifact/javax.xml.bind/jaxb-api -->
+  	<dependency>
+  		<groupId>edu.zut.cs.software.yibuzhiyao</groupId>
+  		<artifactId>yibuzhiyao-base</artifactId>
+  		<version>0.0.1-SNAPSHOT</version>
+  	</dependency>
+  	
+  <!-- https://mvnrepository.com/artifact/javax.xml.bind/jaxb-api -->
 		<dependency>
 			<groupId>javax.xml.bind</groupId>
 			<artifactId>jaxb-api</artifactId>
 			<version>2.3.0</version>
 		</dependency>
-		
-		<dependency>
-    <groupId>javax.persistence</groupId>
-    <artifactId>persistence-api</artifactId>
-    <version>1.0</version>
-</dependency>
-		<dependency>
-			<groupId>edu.cn.cs.software</groupId>
-			<artifactId>yibuzhiyao-base</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
-		</dependency>
-  </dependencies>
-  
-  <build>
+	</dependencies>
+
+	<build>
 
 		<plugins>
 			<!-- To use the plugin goals in your POM or parent POM -->
@@ -39,7 +34,7 @@
 					<scriptAction>drop-and-create</scriptAction>
 					<databaseAction>drop-and-create</databaseAction>
 					<vendor>hibernate</vendor>
-					<packageToScan>edu.zut.cs.yibuzhiyao</packageToScan>
+					<packageToScan>edu.zut.cs.software.yibuzhiyao</packageToScan>
 					<jdbcDriver>com.mysql.jdbc.Driver</jdbcDriver>
 					<jdbcUrl>jdbc:mysql://202.196.37.91:3306/yibuzhiyao</jdbcUrl>
 					<jdbcUser>zutnlp</jdbcUser>
@@ -91,4 +86,5 @@
 			</plugin>
 		</plugins>
 	</build>
+
 </project>

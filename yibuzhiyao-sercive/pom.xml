@@ -5,19 +5,12 @@
     <artifactId>yibuzhiyao</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
-  <artifactId>yibuzhiyao-web</artifactId>
-  <packaging>war</packaging>
+  <artifactId>yibuzhiyao-sercive</artifactId>
   <dependencies>
   	<dependency>
   		<groupId>edu.zut.cs.software.yibuzhiyao</groupId>
-  		<artifactId>yibuzhiyao-sercive</artifactId>
+  		<artifactId>yibuzhiyao-dao</artifactId>
   		<version>0.0.1-SNAPSHOT</version>
   	</dependency>
-  	<!-- https://mvnrepository.com/artifact/javax.servlet/jstl -->
-		<dependency>
-			<groupId>javax.servlet</groupId>
-			<artifactId>jstl</artifactId>
-			<version>1.2</version>
-		</dependency>
   </dependencies>
 </project>

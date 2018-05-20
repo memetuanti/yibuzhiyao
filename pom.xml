@@ -1,26 +1,24 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" 
-		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-		xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>edu.cn.cs.software</groupId>
+  <groupId>edu.zut.cs.software.yibuzhiyao</groupId>
   <artifactId>yibuzhiyao</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>pom</packaging>
   <modules>
-  	<module>yibuzhiyao-dao</module>
   	<module>yibuzhiyao-base</module>
   	<module>yibuzhiyao-client</module>
-  	<module>yibuzhiyao-server</module>
+  	<module>yibuzhiyao-dao</module>
+  	<module>yibuzhiyao-sercive</module>
   	<module>yibuzhiyao-web</module>
-  	<module>yibuzhiyao-service</module>
   </modules>
+  
   <properties>
-  	<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-  	<java.version>1.8</java.version>
-  	<spring.version>5.0.5.RELEASE</spring.version>
-  	<hibernate.version>5.2.16.Final</hibernate.version>
-  </properties>
-  <dependencies>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<java.version>1.8</java.version>
+		<spring.version>5.0.5.RELEASE</spring.version>
+		<hibernate.version>5.2.16.Final</hibernate.version>
+	</properties>
+	<dependencies>
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-context</artifactId>
@@ -53,14 +51,12 @@
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
 			<version>4.12</version>
-			<scope>test</scope>
 		</dependency>
 
 		<dependency><!-- spring对测试框架的简单封装功能 -->
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-test</artifactId>
 			<version>${spring.version}</version>
-			<scope>test</scope>
 		</dependency>
 		<!-- ============== test end ============== -->
 	</dependencies>
@@ -81,4 +77,3 @@
 		</plugins>
 	</build>
 </project>
-

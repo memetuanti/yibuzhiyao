@@ -15,60 +15,44 @@ import edu.zut.cs.software.yibuzhiyao.base.domain.BaseEntity;
 public class Management extends BaseEntity{
 	private static final long serialVersionUID = -4376674977047164142L;
 
-	@Column(name = "name")
-	String name;
-
-	//@Id
-	@Column(name = "num")
-	//@GeneratedValue
-	String num;
-
-	@Column(name = "age")
-	int age;
+	@Column(name = "teskname")
+	String taskname;
 	
-	@Column(name = "sex")
-	String sex;
+	@Column(name = "starttime")
+	int starttime;
 	
-	@Column(name = "score")
-	int score;
+	@Column(name = "endtime")
+	int endtime;
 
-	public String getName() {
-		return name;
+	public String getTaskname() {
+		return taskname;
 	}
 
-	public void setName(String name) {
-		this.name = name;
+	public void setTaskname(String taskname) {
+		this.taskname = taskname;
 	}
 
-	public String getNum() {
-		return num;
+	public int getStarttime() {
+		return starttime;
 	}
 
-	public void setNum(String num) {
-		this.num = num;
+	public void setStarttime(int starttime) {
+		this.starttime = starttime;
 	}
 
-	public int getAge() {
-		return age;
+	public int getEndtime() {
+		return endtime;
 	}
 
-	public void setAge(int age) {
-		this.age = age;
+	public void setEndtime(int endtime) {
+		this.endtime = endtime;
 	}
 
-	public String getSex() {
-		return sex;
-	}
 
-	public void setSex(String sex) {
-		this.sex = sex;
-	}
 
-	public int getScore() {
-		return score;
-	}
 
-	public void setScore(int score) {
-		this.score = score;
-	}
+
+
+
+
 }

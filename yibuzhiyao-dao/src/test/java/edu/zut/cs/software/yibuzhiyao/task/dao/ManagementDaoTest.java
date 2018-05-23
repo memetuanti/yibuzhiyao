@@ -17,7 +17,7 @@ public class ManagementDaoTest extends GenericDaoTestCase<Long, Student, Student
 
 	@Test
 	void test() {
-		String username = "fly";
+		String taskname = "task";
 		Management query = new Management();
 		// List<Student> result = this.studentdao.findOne(null);
 

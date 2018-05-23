@@ -19,22 +19,15 @@ public class ManagementManagerTest extends GenericGenerator{
 	ManagementManager managementManager;
 	
 	@Test				
-	public void stu_add() {
+	public void task_add() {
 		List<Management> stu=new ArrayList<Management>();
-		for(Long i=(long) 0;i<50;i++)
+		for(int i= 0;i<50;i++)
 		{
-			Management s = new Management();
-			s.setName("managementname_" + i);
-			s.setAge(20);
-			s.setNum("20160804"+i);
-			String sex;
-			if(i%2==0)
-				sex="man";
-			else
-				sex="woman";
-			s.setSex(sex);
-			s.setScore(80);
-			this.managementManager.save(s);
+			Management  m= new Management();
+			m.setTaskname("taskname"+i);
+			m.setStarttime(i);
+			m.setEndtime(i+5);
+			this.managementManager.save(m);
 		}
 		
 	}

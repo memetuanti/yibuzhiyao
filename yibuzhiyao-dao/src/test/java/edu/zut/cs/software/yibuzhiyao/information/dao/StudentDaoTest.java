@@ -15,8 +15,8 @@ public class StudentDaoTest  extends GenericDaoTestCase<Long, Student, StudentDa
 
 	@Test
 	void test() {
-		//String username = "fly";
-		//Student query = new Student();
+		String username = "fly";
+		Student query = new Student();
 		// List<Student> result = this.studentdao.findOne(null);
 
 		Student expectedStudent = new Student();

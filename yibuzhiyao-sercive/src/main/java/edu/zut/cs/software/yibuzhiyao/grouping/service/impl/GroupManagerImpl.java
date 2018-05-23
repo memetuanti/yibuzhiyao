@@ -1,12 +1,12 @@
-package edu.zut.cs.software.yibuzhiyao.information.service.impl;
+package edu.zut.cs.software.yibuzhiyao.grouping.service.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import edu.zut.cs.software.yibuzhiyao.base.service.impl.GenericManagerImpl;
-import edu.zut.cs.software.yibuzhiyao.information.dao.GroupDao;
-import edu.zut.cs.software.yibuzhiyao.information.domain.Group;
-import edu.zut.cs.software.yibuzhiyao.information.service.GroupManager;
+import edu.zut.cs.software.yibuzhiyao.grouping.dao.GroupDao;
+import edu.zut.cs.software.yibuzhiyao.grouping.domain.Group;
+import edu.zut.cs.software.yibuzhiyao.grouping.service.GroupManager;
 
 @Component
 public class GroupManagerImpl extends GenericManagerImpl<Group,Long> implements GroupManager {

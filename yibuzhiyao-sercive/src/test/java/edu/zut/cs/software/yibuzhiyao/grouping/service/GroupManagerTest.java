@@ -1,4 +1,4 @@
-package edu.zut.cs.software.yibuzhiyao.information.service;
+package edu.zut.cs.software.yibuzhiyao.grouping.service;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -7,7 +7,7 @@ import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import edu.zut.cs.software.yibuzhiyao.base.service.GenericGenerator;
-import edu.zut.cs.software.yibuzhiyao.information.domain.Group;
+import edu.zut.cs.software.yibuzhiyao.grouping.domain.Group;
 
 public class GroupManagerTest extends GenericGenerator{
 

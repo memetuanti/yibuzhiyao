@@ -1,9 +1,9 @@
-package edu.zut.cs.software.yibuzhiyao.information.service;
+package edu.zut.cs.software.yibuzhiyao.grouping.service;
 
 import java.util.List;
 
 import edu.zut.cs.software.yibuzhiyao.base.service.GenericManager;
-import edu.zut.cs.software.yibuzhiyao.information.domain.Group;
+import edu.zut.cs.software.yibuzhiyao.grouping.domain.Group;
 
 public interface GroupManager extends GenericManager<Group,Long>{
 

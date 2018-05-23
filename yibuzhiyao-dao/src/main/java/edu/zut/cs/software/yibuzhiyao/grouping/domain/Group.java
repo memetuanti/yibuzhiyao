@@ -1,4 +1,4 @@
-package edu.zut.cs.software.yibuzhiyao.information.domain;
+package edu.zut.cs.software.yibuzhiyao.grouping.domain;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

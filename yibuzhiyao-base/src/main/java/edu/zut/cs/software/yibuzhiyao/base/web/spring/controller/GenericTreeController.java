@@ -20,28 +20,7 @@ extends GenericController<T, PK, M> {
 
 	/**
 	 * 得到树结构;
-	 * 
-	 * @param request
-	 * @param response
-	 * @return
-	 */
-	@ResponseBody
-	@RequestMapping(value = "/getTree.json", method = RequestMethod.GET, produces = "application/json")
-	public List<T> getTree(@PathVariable PK id) {
-		List<T> result = null;
-
-		if (id == null) {
-			result = this.treeManager.getRoot();
-		} else {
-			T node = this.treeManager.findById(id);
-			result = node.getChildren();
-		}
-		return result;
-	}
-
-	/**
-	 * 得到树结构;
-	 * 
+	 *
 	 * @param request
 	 * @param response
 	 * @return
@@ -50,6 +29,27 @@ extends GenericController<T, PK, M> {
 	@RequestMapping(value = "/getChildren/{id}", method = RequestMethod.GET, produces = "application/json")
 	public List<T> getChildren(@PathVariable PK id) {
 		List<T> result = this.treeManager.getChildren(id);
+		logger.info(result);
+		return result;
+	}
+
+	/**
+	 * 得到树结构;
+	 *
+	 * @param request
+	 * @param response
+	 * @return
+	 */
+	@ResponseBody
+	@RequestMapping(value = "/getTree/{id}", method = RequestMethod.GET, produces = "application/json")
+	public List<T> getTree(@PathVariable PK id) {
+		List<T> result = null;
+		if (id == null) {
+			result = this.treeManager.getRoot();
+		} else {
+			T node = this.treeManager.findById(id);
+			result = node.getChildren();
+		}
 		return result;
 	}
 }

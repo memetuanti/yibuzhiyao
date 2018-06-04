@@ -7,11 +7,11 @@ Ext.define('student.store.StudentStore', {
 	autoSync : true,// 需要同步
 	model : 'student.model.StudentModel',
 	proxy : {
-		url : server_context + '/teach/student/.json',
+		url : server_context + '/student/.json',
 		type : 'ajax',
 		api : {
-			read : server_context + '/teach/student/.json',
-			update : server_context + '/teach/student/.json'
+			read : server_context + '/student/.json',
+			update : server_context + '/student/.json'
 		},
 		reader : {
 			type : 'json',

@@ -69,4 +69,6 @@ public interface GenericManager<T extends BaseEntity, PK extends Serializable> {
 	 * @param id
 	 */
 	public void delete(PK id);
+
+	List<T> findBynum(String postnum);
 }

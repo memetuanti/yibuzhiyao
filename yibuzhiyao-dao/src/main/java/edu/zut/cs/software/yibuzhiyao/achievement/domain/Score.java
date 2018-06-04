@@ -2,6 +2,8 @@ package edu.zut.cs.software.yibuzhiyao.achievement.domain;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 import javax.persistence.Table;
 
 import edu.zut.cs.software.yibuzhiyao.base.domain.BaseEntity;
@@ -9,6 +11,7 @@ import edu.zut.cs.software.yibuzhiyao.base.domain.BaseEntity;
 @Table(name = "achievement_Score")
 @Entity
 public class Score extends BaseEntity{
+	
 	//@Id
 		@Column(name = "num")
 		//@GeneratedValue

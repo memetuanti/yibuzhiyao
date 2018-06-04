@@ -2,6 +2,8 @@ package edu.zut.cs.software.yibuzhiyao.information.domain;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 import javax.persistence.Table;
 
 import edu.zut.cs.software.yibuzhiyao.base.domain.BaseEntity;
@@ -17,14 +19,24 @@ public class Student  extends BaseEntity {
 	@Column(name = "name")
 	String name;
 
-	//@Id
 	@Column(name = "num")
-	//@GeneratedValue
 	String num;
 
 	@Column(name = "age")
 	int age;
 	
+	@Column(name = "class")
+	String clas;
+	
+	
+	public String getClas() {
+		return clas;
+	}
+
+	public void setClas(String clas) {
+		this.clas = clas;
+	}
+
 	@Column(name = "sex")
 	String sex;
 	

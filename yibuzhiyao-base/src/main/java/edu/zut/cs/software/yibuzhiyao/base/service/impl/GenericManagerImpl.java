@@ -32,6 +32,14 @@ public class GenericManagerImpl<T extends BaseEntity, PK extends Serializable>
 implements GenericManager<T, PK> {
 	protected GenericDao<T, PK> dao;
 
+	public void delete(PK id) {
+		this.dao.deleteById(id);
+	}
+
+	public List<T> findAll() {
+		return this.dao.findAll();
+	}
+
 	public Page<T> findAll(Pageable page) {
 		Page<T> result = this.dao.findAll(page);
 		return result;
@@ -41,20 +49,18 @@ implements GenericManager<T, PK> {
 		return this.dao.getOne(id);
 	}
 
-	public T save(T entity) {
-		return this.dao.saveAndFlush(entity);
-	}
-
 	public List<T> save(Iterable<T> entities) {
 		return this.dao.saveAll(entities);
 	}
 
-	public List<T> findAll() {
-		return this.dao.findAll();
+	public T save(T entity) {
+		return this.dao.saveAndFlush(entity);
 	}
 
-	public void delete(PK id) {
-		this.dao.deleteById(id);
+	@Override
+	public List<T> findBynum(String postnum) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }

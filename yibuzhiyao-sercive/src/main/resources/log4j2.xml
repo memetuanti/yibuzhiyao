@@ -10,7 +10,7 @@
 		<logger name="org.springframework" level="WARN" />
 		<logger name="org.hibernate" level="WARN" />
 		<logger name="edu.zut.cs" level="DEBUG" />
-		<Root level="error">
+		<Root level="debug">
 			<AppenderRef ref="Console" />
 		</Root>
 	</Loggers>

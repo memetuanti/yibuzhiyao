@@ -6,30 +6,30 @@ Ext.define('student.model.StudentModel', {
 		type : 'int',
 		sortable : true
 	}, {
-		name : 'code',
+		name : 'num',
 		type : 'string',
 		sortable : true
 	}, {
-		name : 'fullName',
+		name : 'name',
 		type : 'string',
 		sortable : true
 	}, {
-		name : 'gender',
+		name : 'clas',
 		type : 'string',
 		sortable : true
 	}, {
-		name : 'major',
+		name : 'sex',
 		type : 'string',
 		sortable : true
 	}, {
-		name : 'grade',
-		type : 'string',
+		name : 'age',
+		type : 'int',
 		sortable : true
 	}, {
-		name : 'clazz',
-		type : 'string',
+		name : 'score',
+		type : 'int',
 		sortable : true
-	}, {
+	},{
 		name : 'dateCreated',
 		type : 'date',
 		dateFormat : 'time',

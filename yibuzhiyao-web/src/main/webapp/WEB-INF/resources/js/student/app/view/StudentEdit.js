@@ -12,29 +12,29 @@ Ext.define('student.view.StudentEdit', {
 			border : false,
 			items : [ {
 				xtype : 'textfield',
-				name : 'code',
+				name : 'num',
 				fieldLabel : '学号'
 			}, {
 				xtype : 'textfield',
-				name : 'fullName',
+				name : 'name',
 				fieldLabel : '姓名'
 			}, {
 				xtype : 'textfield',
-				name : 'gender',
-				fieldLabel : '性别'
-			}, {
-				xtype : 'textfield',
-				name : 'major',
-				fieldLabel : '专业'
-			}, {
-				xtype : 'textfield',
-				name : 'grade',
-				fieldLabel : '年级'
-			}, {
-				xtype : 'textfield',
-				name : 'clazz',
+				name : 'clas',
 				fieldLabel : '班级'
-			} ]
+			}, {
+				xtype : 'textfield',
+				name : 'sex',
+				fieldLabel : '性别'
+			},{
+				xtype : 'textfield',
+				name : 'age',
+				fieldLabel : '年龄'
+			}, {
+				xtype : 'textfield',
+				name : 'score',
+				fieldLabel : '分数'
+			},   ]
 		} ];
 		this.buttons = [ {
 			text : '保存',

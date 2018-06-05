@@ -3,10 +3,25 @@ package edu.zut.cs.software.yibuzhiyao.information.service;
 import java.util.List;
 import edu.zut.cs.software.yibuzhiyao.base.service.GenericManager;
 import edu.zut.cs.software.yibuzhiyao.information.domain.Student;
-
+/**
+ * 
+ * @author yibuzhiyao
+ *
+ */
 public interface StudentManager  extends GenericManager<Student, Long>{
 	
-	List<Student> findAll();
+	/**
+	 * get student list by given code
+	 *
+	 * @param num
+	 * @return
+	 */
+	List<Student> findByNum(String num);
 
-	Student findbyStudentname(String studentname);
+	/**
+	 * 
+	 * @param name
+	 * @return
+	 */
+	List<Student> findByName(String name);
 }

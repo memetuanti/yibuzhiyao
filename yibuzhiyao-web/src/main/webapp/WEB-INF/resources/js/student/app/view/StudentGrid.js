@@ -5,7 +5,7 @@ var studentStore = Ext.create('student.store.StudentStore');
 Ext.define('student.view.StudentGrid', {
 	extend : 'Ext.grid.GridPanel',
 	alias : 'widget.studentGrid',
-	title : 'Java EE 课程-学生列表',
+	title : 'Java EE 一步之遥——软件工程学生信息表',
 	store : studentStore,
 	columns : [ {
 		text : 'ID',
@@ -16,33 +16,33 @@ Ext.define('student.view.StudentGrid', {
 		text : "学号",
 		width : 120,
 		sortable : true,
-		dataIndex : 'code'
+		dataIndex : 'num'
 	}, {
 		text : "姓名",
 		width : 80,
 		sortable : true,
-		dataIndex : 'fullName'
-	}, {
-		text : "性别",
-		width : 80,
-		sortable : true,
-		dataIndex : 'gender'
-	}, {
-		text : " 专业",
-		width : 80,
-		sortable : true,
-		dataIndex : 'major'
-	}, {
-		text : "年级",
-		width : 80,
-		sortable : true,
-		dataIndex : 'grade'
+		dataIndex : 'name'
 	}, {
 		text : "班级",
 		width : 80,
 		sortable : true,
-		dataIndex : 'clazz'
+		dataIndex : 'clas'
+	},{
+		text : "性别",
+		width : 80,
+		sortable : true,
+		dataIndex : 'sex'
 	}, {
+		text : " 年龄",
+		width : 80,
+		sortable : true,
+		dataIndex : 'age'
+	}, {
+		text : "分数",
+		width : 80,
+		sortable : true,
+		dataIndex : 'score'
+	} , {
 		text : "添加时间",
 		width : 150,
 		dataIndex : 'dateCreated',

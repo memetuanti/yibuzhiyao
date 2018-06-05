@@ -13,4 +13,10 @@
 	<!-- Activates scanning of @Service -->
 	<context:component-scan
 		base-package="edu.zut.cs.software.yibuzhiyao.**.service" />
+		<aop:aspectj-autoproxy />
+
+	<!-- <aop:config> <aop:aspect id="before" ref="beforeLogger"> <aop:pointcut 
+		id="MyPointCut" expression="execution(* edu.zut.cs.software.yibuzhiyao.*.service.*..*(..))" 
+		/> <aop:before method="before" pointcut-ref="MyPointCut" /> </aop:aspect> 
+		</aop:config> -->
 </beans>

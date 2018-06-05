@@ -1,32 +1,36 @@
 Ext.require(['Ext.data.*', 'Ext.grid.*']);
 
-Ext.define('student.StudentModel', {
+Ext.define('student.StudentModel', {		//ziji
 			extend : 'Ext.data.Model',
 			fields : [{
 						name : 'id',
 						type : 'int',
 						sortable : true
 					}, {
-						name : 'code',
+						name : 'num',
 						type : 'string',
 						sortable : true
 					}, {
-						name : 'fullName',
+						name : 'name',
 						type : 'string',
 						sortable : true
 					}, {
-						name : 'gender',
+						name : 'clas',
 						type : 'string',
 						sortable : true
 					}, {
-						name : 'grade',
+						name : 'sex',
 						type : 'string',
 						sortable : true
 					}, {
-						name : 'clazz',
-						type : 'string',
+						name : 'age',
+						type : 'int',
 						sortable : true
 					}, {
+						name : 'score',
+						type : 'int',
+						sortable : true
+					},{
 						name : 'dateCreated',
 						type : 'date',
 						dateFormat : 'time',
@@ -67,7 +71,7 @@ var store = new Ext.data.Store({
 					} else {
 						verb = name + 'd';
 					}
-					Ext.example.msg(name, Ext.String.format("{0} user: {1}",
+					Ext.example.msg(name, Ext.String.format("{0} student: {1}",
 									verb, record.getId()));
 				}
 			},
@@ -135,7 +139,7 @@ var studentGrid = new Ext.grid.GridPanel({
 						text : "学号",
 						width : 120,
 						sortable : true,
-						dataIndex : 'code',
+						dataIndex : 'num',
 						editor : textFieldEditor,
 						field : {
 							xtype : 'textfield'
@@ -144,29 +148,35 @@ var studentGrid = new Ext.grid.GridPanel({
 						text : "姓名",
 						width : 80,
 						sortable : true,
-						dataIndex : 'fullName',
+						dataIndex : 'name',
 						editor : textFieldEditor,
 						field : {
 							xtype : 'textfield'
 						}
 					}, {
-						text : "性别",
-						width : 50,
-						sortable : true,
-						dataIndex : 'gender',
-						editor : genderFieldEditor
-					}, {
-						text : "年级",
-						width : 50,
-						sortable : true,
-						editor : textFieldEditor,
-						dataIndex : 'grade'
-					}, {
 						text : "班级",
 						width : 80,
 						sortable : true,
 						editor : textFieldEditor,
-						dataIndex : 'clazz'
+						dataIndex : 'clas'
+					},{
+						text : "性别",
+						width : 50,
+						sortable : true,
+						dataIndex : 'sex',
+						editor : genderFieldEditor
+					}, {
+						text : "年龄",
+						width : 50,
+						sortable : true,
+						editor : textFieldEditor,
+						dataIndex : 'age'
+					}, {
+						text : "分数",
+						width : 50,
+						sortable : true,
+						editor : textFieldEditor,
+						dataIndex : 'score'
 					}, {
 						text : "添加时间",
 						width : 150,
@@ -238,7 +248,7 @@ var studentForm = new Ext.form.FormPanel({
 			items : [{
 						fieldLabel : "学号",
 						xtype : 'textfield',
-						name : 'code'
+						name : 'num'
 					}, {
 						fieldLabel : "姓名",
 						xtype : 'textfield',
@@ -246,7 +256,7 @@ var studentForm = new Ext.form.FormPanel({
 					}, {
 						fieldLabel : "性别",
 						xtype : 'textfield',
-						name : 'gender'
+						name : 'sex'
 					}],
 			buttons : [{
 						xtype : 'button',

@@ -17,6 +17,7 @@ public class StudentController  extends GenericController<Student, Long, Student
 
 	@RequestMapping(method = RequestMethod.GET, value = "/index.html")
 	public String index() {
+		
 		String result = "/student/index";
 		return result;
 	}

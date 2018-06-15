@@ -22,14 +22,6 @@ Ext.define('score.ScoreModel', {		//ziji
 						name : 'math',
 						type : 'int',
 						sortable : true
-					}, {
-						name : 'age',
-						type : 'int',
-						sortable : true
-					}, {
-						name : 'score',
-						type : 'int',
-						sortable : true
 					},{
 						name : 'dateCreated',
 						type : 'date',
@@ -89,7 +81,7 @@ var textFieldEditor = {
 	maxText : '最多输入{0}个字符！'
 }
 
-var genderFieldEditor = {
+/*var genderFieldEditor = {
 	xtype : 'combo',
 	triggerAction : 'all',
 	forceSelection : true,
@@ -107,7 +99,7 @@ var genderFieldEditor = {
 					label : '女'
 				}]
 	}
-}
+}*/
 var rowEditing = Ext.create('Ext.grid.plugin.RowEditing', {
 			listeners : {
 				cancelEdit : function(rowEditing, context) {
@@ -120,8 +112,8 @@ var rowEditing = Ext.create('Ext.grid.plugin.RowEditing', {
 			}
 		});
 
-var studentGrid = new Ext.grid.GridPanel({
-			id : 'studentGrid',
+var scoreGrid = new Ext.grid.GridPanel({
+			id : 'scoreGrid',
 			plugins : [rowEditing],
 			store : store,
 			region : 'center',
@@ -129,13 +121,8 @@ var studentGrid = new Ext.grid.GridPanel({
 			loadMask : true,
 			stripeRows : true,
 			width : 600,
-			title : '学生基本信息列表',
+			title : '学生成绩列表',
 			columns : [{
-						text : 'ID',
-						width : 50,
-						sortable : true,
-						dataIndex : 'id'
-					}, {
 						text : "学号",
 						width : 120,
 						sortable : true,
@@ -154,29 +141,23 @@ var studentGrid = new Ext.grid.GridPanel({
 							xtype : 'textfield'
 						}
 					}, {
-						text : "班级",
+						text : "数据库",
 						width : 80,
 						sortable : true,
 						editor : textFieldEditor,
-						dataIndex : 'clas'
+						dataIndex : 'DB'
 					},{
-						text : "性别",
+						text : "javaee",
 						width : 50,
 						sortable : true,
-						dataIndex : 'sex',
+						dataIndex : 'javaee',
 						editor : genderFieldEditor
 					}, {
-						text : "年龄",
+						text : "数学",
 						width : 50,
 						sortable : true,
 						editor : textFieldEditor,
-						dataIndex : 'age'
-					}, {
-						text : "分数",
-						width : 50,
-						sortable : true,
-						editor : textFieldEditor,
-						dataIndex : 'score'
+						dataIndex : 'math'
 					}, {
 						text : "添加时间",
 						width : 150,
@@ -216,9 +197,9 @@ var studentGrid = new Ext.grid.GridPanel({
 			}
 		});
 
-studentGrid.getSelectionModel().on('selectionchange',
+scoreGrid.getSelectionModel().on('selectionchange',
 		function(selModel, selections) {
-			studentGrid.down('#delete').setDisabled(selections.length === 0);
+			scoreGrid.down('#delete').setDisabled(selections.length === 0);
 		});
 
 new Ext.form.NumberField({
@@ -231,13 +212,13 @@ new Ext.form.NumberField({
 
 var clearForm = function() {
 	Ext.Msg.alert('重置', '重置查询表单！');
-	studentForm.getForm().reset();
+	scoreForm.getForm().reset();
 }
 
 var queryForm = function() {
 	Ext.Msg.alert('查询', '将开始执行查询！');
 }
-var studentForm = new Ext.form.FormPanel({
+var scoreForm = new Ext.form.FormPanel({
 			title : '信息查询',
 			width : 200,
 			height : 200,
@@ -253,10 +234,6 @@ var studentForm = new Ext.form.FormPanel({
 						fieldLabel : "姓名",
 						xtype : 'textfield',
 						name : 'name'
-					}, {
-						fieldLabel : "性别",
-						xtype : 'textfield',
-						name : 'sex'
 					}],
 			buttons : [{
 						xtype : 'button',
@@ -272,11 +249,11 @@ var studentForm = new Ext.form.FormPanel({
 		})
 
 Ext.application({
-			name : '学生信息',
+			name : '学生成绩信息',
 			launch : function() {
 				Ext.create('Ext.container.Viewport', {
 							layout : 'border',
-							items : [studentForm, studentGrid]
+							items : [scoreForm, scoreGrid]
 						});
 			}
 		});

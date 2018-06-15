@@ -1,9 +1,10 @@
-package edu.zut.cs.software.yibuzhiyao.information.service;
+package edu.zut.cs.software.yibuzhiyao.grouping.service;
 
 import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.apache.commons.lang3.StringUtils;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.CellType;
 import org.apache.poi.ss.usermodel.Row;
@@ -12,70 +13,71 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.junit.Before;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
+
+
 import edu.zut.cs.software.yibuzhiyao.base.service.GenericGenerator;
-import edu.zut.cs.software.yibuzhiyao.information.domain.Student;
+import edu.zut.cs.software.yibuzhiyao.grouping.domain.Group;
 
 /**
  *  Entity Generator for teach package.
+ * 
  * @author yibuzhiyao
  *
  */
-public class TeachEntityGenerator  extends GenericGenerator{
-	List<Student> studentList;
+public class TeachEntityGenerator extends GenericGenerator{
 
-	StudentManager studentManager;
-
+	
+	List<Group> groupList;
+	GroupManager groupmanager;
+	
 	@Autowired
-	public void setStudentManager(StudentManager studentManager) {
-		this.studentManager = studentManager;
+	public void setGroupManager(GroupManager groupmanager)
+	{
+		this.groupmanager=groupmanager;
 	}
-
+	
 	@Before
 	public void setUp() throws Exception {
-		this.studentList = new ArrayList<Student>();
-		InputStream input = StudentManagerTest.class.getResourceAsStream("/student_software.xlsx");
+		this.groupList=new ArrayList<Group>();
+		InputStream input = GroupManagerTest.class.getResourceAsStream("/group_software.xlsx");
 		@SuppressWarnings("resource")
 		XSSFWorkbook wb = new XSSFWorkbook(input);
 		XSSFSheet sheet = wb.getSheetAt(0);
 		for (int i = 1; i <= sheet.getLastRowNum(); i++) {
 			Row row = sheet.getRow(i);
-			Student s = new Student();
+			Group g=new Group();
 			for (int j = 0; j < row.getLastCellNum(); j++) {
 				Cell cell = row.getCell(j);
 				if (cell != null) {
 					cell.setCellType(CellType.STRING);
 					String value = row.getCell(j).getStringCellValue().trim();
 					if (j == 1)
-						s.setNum(value);
+						g.setg_snum(value);
 					if (j == 2)
-						s.setName(value);
+						g.setg_name(value);
 					if (j == 3)
-						s.setClas(value);
+						g.setg_cla(value);
 					if (j == 4)
-						s.setSex(value);
+						g.setg_sex(value);
 					if (j == 5)
-					{
+						{
 						int a=Integer.parseInt(value);
-						s.setAge(a);
-					}
+						g.setg_age(a);
+						}
 					if (j == 6)
-					{
-						int b=Integer.parseInt(value);
-						s.setScore(b);
-					}
+					g.setg_Major(value);
 				}
 			}
-			this.studentList.add(s);
-		}
+			this.groupList.add(g);
 	}
-
+}
 	@Test
 	public void test() {
-		this.studentManager.save(this.studentList);
-		List<Student> result = this.studentManager.findAll();
-		if (logger.isInfoEnabled()) {
-			logger.info("test() - List<Student> result=" + result); //$NON-NLS-1$
+		this.groupmanager.save(this.groupList);
+		List<Group> result=this.groupmanager.findAll();
+		if (logger.isInfoEnabled()) 
+		{
+			logger.info("test() - List<Group> result="+result);
 		}
 	}
-
 }

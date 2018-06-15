@@ -2,13 +2,10 @@ package edu.zut.cs.software.yibuzhiyao.information.service;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
-import java.sql.Date;
-import java.util.ArrayList;
 import java.util.List;
 import org.junit.Before;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
-import edu.zut.cs.software.yibuzhiyao.base.service.GenericGenerator;
 import edu.zut.cs.software.yibuzhiyao.base.service.GenericManagerTestCase;
 import edu.zut.cs.software.yibuzhiyao.information.domain.Student;
 

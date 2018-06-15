@@ -1,54 +1,37 @@
 package edu.zut.cs.software.yibuzhiyao.achievement.service;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotNull;
-import java.sql.Date;
 import java.util.ArrayList;
 import java.util.List;
-import org.junit.Before;
+
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import edu.zut.cs.software.yibuzhiyao.achievement.domain.Score;
 import edu.zut.cs.software.yibuzhiyao.base.service.GenericGenerator;
-import edu.zut.cs.software.yibuzhiyao.base.service.GenericManagerTestCase;
 
-public class ScoreManagerTest extends GenericManagerTestCase<Long, Score, ScoreManager>{
-	ScoreManager scoreManager;
-
-	public ScoreManagerTest() {
-		super(Score.class);
-	}
-
+public class ScoreManagerTest extends GenericGenerator{
 	@Autowired
-	public void setScoreManager(ScoreManager scoreManager) {
-		this.scoreManager = scoreManager;
-		this.manager = this.scoreManager;
-	}
+	ScoreManager scoremanager;
+	
+	/*@Test
+	void test() {
+		String username = "yang929";
+		Score query = new Score();
 
-	@Before
-	public void setUp() throws Exception {
-		Score score = new Score();
-		score.setName("张三");
-		score.setNum("201608040218");
-		this.entity = this.manager.save(score);
-	}
-
+		Score expectedScore = new Score();
+	}*/
+	
 	@Test
-	public void testfindbyName() {
-		List<Score> result = this.scoreManager.findbyName("张");
-		assertNotNull(result);
-		assertEquals(1, result.size());
-		assertEquals("张三", result.get(0).getName());
+	public void gen_score() {
+		List<Score> sco=new ArrayList<Score>();
+		for (Long i = (long)0; i < 60; i++) {
+				Score m = new Score();
+				//Score score = new Score();
+				m.setNum("20160804" + i);
+				m.setMath(80);
+				m.setDB(75);
+				m.setJavaee(95);
+				this.scoremanager.save(m);
+			}
 	}
-
-	@Test
-	public void testfindbyNum() {
-		String num = this.entity.getNum();
-		List<Score> result = this.scoreManager.findbyNum(num);
-		assertEquals(num, result.get(0).getNum());
-
-	}
-
-
 }

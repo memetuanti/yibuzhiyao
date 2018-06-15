@@ -2,8 +2,6 @@ package edu.zut.cs.software.yibuzhiyao.achievement.domain;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
 import javax.persistence.Table;
 
 import edu.zut.cs.software.yibuzhiyao.base.domain.BaseEntity;
@@ -12,9 +10,12 @@ import edu.zut.cs.software.yibuzhiyao.base.domain.BaseEntity;
 @Entity
 public class Score extends BaseEntity{
 	
+	private static final long serialVersionUID = -4376674977047164142L;
 	//@Id
+		@Column(name = "name")
+		String name;
+		
 		@Column(name = "num")
-		//@GeneratedValue
 		String num;
 		
 		@Column(name = "math")
@@ -46,8 +47,8 @@ public class Score extends BaseEntity{
 			return DB;
 		}
 
-		public void setDB(int dB) {
-			this.DB = dB;
+		public void setDB(int DB) {
+			this.DB = DB;
 		}
 
 		public int getJavaee() {
@@ -57,5 +58,13 @@ public class Score extends BaseEntity{
 		public void setJavaee(int javaee) {
 			this.javaee = javaee;
 		}
+		public String getName() {
+			return name;
+		}
+
+		public void setName(String name) {
+			this.name = name;
+		}
+
 		
 }

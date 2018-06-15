@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Configuration status="WARN">
+<Configuration status="ERROR">
 	<Appenders>
 		<Console name="Console" target="SYSTEM_OUT">
 			<PatternLayout
@@ -9,8 +9,8 @@
 	<Loggers>
 		<logger name="org.springframework" level="WARN" />
 		<logger name="org.hibernate" level="WARN" />
-		<logger name="edu.zut.cs.software" level="DEBUG" />
-		<Root level="error">
+		<logger name="edu.zut.cs。software.yibuzhiyao" level="DEBUG" />
+		<Root level="debug">
 			<AppenderRef ref="Console" />
 		</Root>
 	</Loggers>

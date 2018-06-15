@@ -1,7 +1,5 @@
 package edu.zut.cs.software.yibuzhiyao.grouping.dao;
 
-import java.util.List;
-
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -12,16 +10,12 @@ public class GroupDaoTest extends GenericDaoTestCase<Long,Group,GroupDao>{
 	
 	@Autowired
 	GroupDao groupdao;
-
 	
 	@Test
-	public void testFindAll() {
-
-		List<Group> result = this.groupdao.findAll();
-		if (logger.isInfoEnabled()) {
-			logger.info("testFindAll() - List<Group> result={}", result); //$NON-NLS-1$
-		}
-
+	void test()
+	{
+		String username="520";
+		Group g=new Group();
 	}
 
 }

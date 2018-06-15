@@ -47,8 +47,8 @@ public class Score extends BaseEntity{
 			return DB;
 		}
 
-		public void setDB(int dB) {
-			this.DB = dB;
+		public void setDB(int DB) {
+			this.DB = DB;
 		}
 
 		public int getJavaee() {

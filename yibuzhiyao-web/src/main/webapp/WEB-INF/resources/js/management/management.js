@@ -1,34 +1,18 @@
 Ext.require(['Ext.data.*', 'Ext.grid.*']);
 
-Ext.define('score.ScoreModel', {		//ziji
+Ext.define('management.Management', {		//ziji
 			extend : 'Ext.data.Model',
 			fields : [{
-						name : 'num',
-						type : 'string',
+						name : 'teskname',
+						type : 'date',
 						sortable : true
 					}, {
-						name : 'name',
-						type : 'string',
+						name : 'starttime',
+						type : 'date',
 						sortable : true
-					}, {
-						name : 'DB',
-						type : 'int',
-						sortable : true
-					}, {
-						name : 'javaee',
-						type : 'int',
-						sortable : true
-					}, {
-						name : 'math',
-						type : 'int',
-						sortable : true
-					}, {
-						name : 'age',
-						type : 'int',
-						sortable : true
-					}, {
-						name : 'score',
-						type : 'int',
+					},  {
+						name : 'endtime',
+						type : 'date',
 						sortable : true
 					},{
 						name : 'dateCreated',
@@ -48,7 +32,7 @@ var pageSize = 20;
 var store = new Ext.data.Store({
 			autoLoad : true,
 			autoSync : true,// 需要同步
-			model : 'score.ScoreModel',
+			model : 'management.ManagementModel',
 			proxy : {
 				type : 'rest',
 				url : './.json',
@@ -71,7 +55,7 @@ var store = new Ext.data.Store({
 					} else {
 						verb = name + 'd';
 					}
-					Ext.example.msg(name, Ext.String.format("{0} score: {1}",
+					Ext.example.msg(name, Ext.String.format("{0} management: {1}",
 									verb, record.getId()));
 				}
 			},
@@ -121,7 +105,7 @@ var rowEditing = Ext.create('Ext.grid.plugin.RowEditing', {
 		});
 
 var studentGrid = new Ext.grid.GridPanel({
-			id : 'studentGrid',
+			id : 'ManagementGrid',
 			plugins : [rowEditing],
 			store : store,
 			region : 'center',
@@ -131,52 +115,32 @@ var studentGrid = new Ext.grid.GridPanel({
 			width : 600,
 			title : '学生基本信息列表',
 			columns : [{
-						text : 'ID',
+						text : '科目名称',
 						width : 50,
 						sortable : true,
-						dataIndex : 'id'
+						dataIndex : 'teskname'
+							editor : textFieldEditor,
+							field : {
+								xtype : 'textfield'
+							}
 					}, {
-						text : "学号",
+						text : "开始时间",
 						width : 120,
 						sortable : true,
-						dataIndex : 'num',
+						dataIndex : 'starttime',
 						editor : textFieldEditor,
 						field : {
 							xtype : 'textfield'
 						}
 					}, {
-						text : "姓名",
+						text : "结束时间",
 						width : 80,
 						sortable : true,
-						dataIndex : 'name',
+						dataIndex : 'endtime',
 						editor : textFieldEditor,
 						field : {
 							xtype : 'textfield'
 						}
-					}, {
-						text : "班级",
-						width : 80,
-						sortable : true,
-						editor : textFieldEditor,
-						dataIndex : 'clas'
-					},{
-						text : "性别",
-						width : 50,
-						sortable : true,
-						dataIndex : 'sex',
-						editor : genderFieldEditor
-					}, {
-						text : "年龄",
-						width : 50,
-						sortable : true,
-						editor : textFieldEditor,
-						dataIndex : 'age'
-					}, {
-						text : "分数",
-						width : 50,
-						sortable : true,
-						editor : textFieldEditor,
-						dataIndex : 'score'
 					}, {
 						text : "添加时间",
 						width : 150,
@@ -246,17 +210,17 @@ var studentForm = new Ext.form.FormPanel({
 			defaultType : 'textfiled',
 			labelWidth : 30,
 			items : [{
-						fieldLabel : "学号",
+						fieldLabel : "科目名称",
 						xtype : 'textfield',
-						name : 'num'
+						name : 'teskname'
 					}, {
-						fieldLabel : "姓名",
+						fieldLabel : "开始时间",
 						xtype : 'textfield',
-						name : 'name'
+						name : 'starttime'
 					}, {
-						fieldLabel : "性别",
+						fieldLabel : "结束时间",
 						xtype : 'textfield',
-						name : 'sex'
+						name : 'endtime'
 					}],
 			buttons : [{
 						xtype : 'button',

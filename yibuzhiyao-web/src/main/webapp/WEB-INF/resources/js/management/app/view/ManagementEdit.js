@@ -1,6 +1,6 @@
-Ext.define('score.view.ScoreEdit', {
+Ext.define('management.view.ManagementEdit', {
 	extend : 'Ext.window.Window',
-	alias : 'widget.scoreEdit',
+	alias : 'widget.managementEdit',
 	title : '编辑学生成绩',
 	layout : 'fit',
 	autoShow : true,
@@ -12,29 +12,17 @@ Ext.define('score.view.ScoreEdit', {
 			border : false,
 			items : [ {
 				xtype : 'textfield',
-				name : 'num',
-				fieldLabel : '学号'
+				name : 'teskname',
+				fieldLabel : '科目名称'
 			}, {
 				xtype : 'textfield',
-				name : 'name',
-				fieldLabel : '姓名'
+				name : 'starttime',
+				fieldLabel : '开始时间'
 			}, {
 				xtype : 'textfield',
-				name : 'DB',
-				fieldLabel : '数据库'
-			}, {
-				xtype : 'textfield',
-				name : 'javaee',
-				fieldLabel : 'javaee'
-			},{
-				xtype : 'textfield',
-				name : 'math',
-				fieldLabel : '数学'
-			}, /*{
-				xtype : 'textfield',
-				name : 'score',
-				fieldLabel : '分数'
-			}, */  ]
+				name : 'endtime',
+				fieldLabel : '结束时间'
+			}]
 		} ];
 		this.buttons = [ {
 			text : '保存',

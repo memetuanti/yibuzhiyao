@@ -1,48 +1,33 @@
 var pageSize = 20;
 
-var scoreStore = Ext.create('score.store.ScoreStore');
+var managementStore = Ext.create('management.store.ManagementStore');
 
-Ext.define('score.view.ScoreGrid', {
+Ext.define('management.view.ManagementGrid', {
 	extend : 'Ext.grid.GridPanel',
-	alias : 'widget.scoreGrid',
-	title : 'Java EE 一步之遥——软件工程学生成绩表',
-	store : scoreStore,
-	columns : [/* {
+	alias : 'widget.managementGrid',
+	title : 'Java EE 课程-学生列表',
+	store : managementStore,
+	columns : [ {
 		text : 'ID',
 		width : 50,
 		sortable : true,
 		dataIndex : 'id'
-	}, */{
-		text : "学号",
+	}, {
+		text : "taskname",
 		width : 120,
 		sortable : true,
-		dataIndex : 'num'
+		dataIndex : 'taskname'
 	}, {
-		text : "姓名",
+		text : "starttime",
 		width : 80,
 		sortable : true,
-		dataIndex : 'name'
+		dataIndex : 'starttime'
 	}, {
-		text : "班级",
+		text : "endtime",
 		width : 80,
 		sortable : true,
-		dataIndex : 'clas'
-	},{
-		text : "数据库",
-		width : 80,
-		sortable : true,
-		dataIndex : 'DB'
+		dataIndex : 'endtime'
 	}, {
-		text : " javaee",
-		width : 80,
-		sortable : true,
-		dataIndex : 'javaee'
-	}, {
-		text : "数学",
-		width : 80,
-		sortable : true,
-		dataIndex : 'math'
-	} , {
 		text : "添加时间",
 		width : 150,
 		dataIndex : 'dateCreated',
@@ -63,7 +48,7 @@ Ext.define('score.view.ScoreGrid', {
 
 	bbar : new Ext.PagingToolbar({
 		pageSize : pageSize,// 每页显示的记录值
-		store : scoreStore,
+		store : managementStore,
 		displayInfo : true,
 		firstTest : '首页',
 		lastText : '尾页',

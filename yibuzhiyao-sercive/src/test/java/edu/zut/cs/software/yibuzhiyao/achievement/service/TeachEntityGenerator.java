@@ -44,25 +44,25 @@ public class TeachEntityGenerator extends GenericGenerator {
 		for (int i = 1; i <= sheet.getLastRowNum(); i++) {//最后一行
 			Row row = sheet.getRow(i);
 			Score s = new Score();
-			for (int j = 2; j < row.getLastCellNum(); j++) {//最后一节
+			for (int j = 1; j < row.getLastCellNum(); j++) {//最后一节
 				Cell cell = row.getCell(j);
 				if (cell != null) {
 					cell.setCellType(CellType.STRING);
 					String value1 = row.getCell(j).getStringCellValue().trim();
-					//if(j==0)
-						//break;  
-					//criteria.setResultTransformer(CriteriaSpecification.ROOT_ENTITY);  
-					/*if (j == 1)
+					if (j == 1)
 						s.setNum(value1);
 					if (j == 2)
-						s.setName(value1);*/
-					int value2 = Integer.parseInt(value1);
-					if (j == 2)
-						s.setDB(value2);
-					if (j == 3)
-						s.setJavaee(value2);
-					if (j == 4)
-						s.setMath(value2);
+						s.setName(value1);
+					
+					if (j == 3) {
+						int value2 = Integer.parseInt(value1);
+						s.setDB(value2);}
+					if (j == 4) {
+						int value3 = Integer.parseInt(value1);
+						s.setJavaee(value3);}
+					if (j == 5) {
+						int value4 = Integer.parseInt(value1);
+						s.setMath(value4);}
 				}
 			}
 			this.scoreList.add(s);

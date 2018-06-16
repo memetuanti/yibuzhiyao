@@ -1,8 +1,6 @@
- package edu.zut.cs.software.yibuzhiyao.task.domain;
+package edu.zut.cs.software.yibuzhiyao.task.domain;
 
 
-
-import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -21,10 +19,10 @@ public class Management extends BaseEntity{
 	String taskname;
 	
 	@Column(name = "starttime")
-	Date starttime;
+	int starttime;
 	
 	@Column(name = "endtime")
-	Date endtime;
+	int endtime;
 
 	public String getTaskname() {
 		return taskname;
@@ -34,22 +32,21 @@ public class Management extends BaseEntity{
 		this.taskname = taskname;
 	}
 
-	public Date getStarttime() {
+	public int getStarttime() {
 		return starttime;
 	}
 
-	public void setStarttime(Date starttime) {
+	public void setStarttime(int starttime) {
 		this.starttime = starttime;
 	}
 
-	public Date getEndtime() {
+	public int getEndtime() {
 		return endtime;
 	}
 
-	public void setEndtime(Date endtime) {
+	public void setEndtime(int endtime) {
 		this.endtime = endtime;
 	}
-
 
 
 

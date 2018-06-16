@@ -7,12 +7,7 @@ Ext.define('score.view.ScoreGrid', {
 	alias : 'widget.scoreGrid',
 	title : 'Java EE 一步之遥——软件工程学生成绩表',
 	store : scoreStore,
-	columns : [/* {
-		text : 'ID',
-		width : 50,
-		sortable : true,
-		dataIndex : 'id'
-	}, */{
+	columns : [{
 		text : "学号",
 		width : 120,
 		sortable : true,
@@ -23,15 +18,10 @@ Ext.define('score.view.ScoreGrid', {
 		sortable : true,
 		dataIndex : 'name'
 	}, {
-		text : "班级",
-		width : 80,
-		sortable : true,
-		dataIndex : 'clas'
-	},{
 		text : "数据库",
 		width : 80,
 		sortable : true,
-		dataIndex : 'DB'
+		dataIndex : 'db'
 	}, {
 		text : " javaee",
 		width : 80,

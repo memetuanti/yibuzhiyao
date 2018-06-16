@@ -20,7 +20,7 @@ Ext.define('score.view.ScoreEdit', {
 				fieldLabel : '姓名'
 			}, {
 				xtype : 'textfield',
-				name : 'DB',
+				name : 'db',
 				fieldLabel : '数据库'
 			}, {
 				xtype : 'textfield',
@@ -30,11 +30,7 @@ Ext.define('score.view.ScoreEdit', {
 				xtype : 'textfield',
 				name : 'math',
 				fieldLabel : '数学'
-			}, /*{
-				xtype : 'textfield',
-				name : 'score',
-				fieldLabel : '分数'
-			}, */  ]
+			}, ]
 		} ];
 		this.buttons = [ {
 			text : '保存',

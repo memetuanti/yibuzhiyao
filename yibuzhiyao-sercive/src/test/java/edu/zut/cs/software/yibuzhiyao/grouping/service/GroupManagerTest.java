@@ -1,48 +1,43 @@
 package edu.zut.cs.software.yibuzhiyao.grouping.service;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotNull;
-
+import java.util.ArrayList;
 import java.util.List;
 
-import org.junit.Before;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
-import edu.zut.cs.software.yibuzhiyao.base.service.GenericManagerTestCase;
+import edu.zut.cs.software.yibuzhiyao.base.service.GenericGenerator;
 import edu.zut.cs.software.yibuzhiyao.grouping.domain.Group;
 
-public class GroupManagerTest extends GenericManagerTestCase<Long,Group,GroupManager>{
+public class GroupManagerTest extends GenericGenerator{
+
+	
+	@Autowired
 	GroupManager groupmanager;
 	
-	
-	public GroupManagerTest() {
-		super(Group.class);
-	}
-	@Autowired
-	public void setGroupManager(GroupManager groupmanager) {
-		this.groupmanager=groupmanager;
-		this.manager=this.groupmanager;
-	}
-	@Before
-	public void setUp() throws Exception{
-		Group group=new Group();
-		group.setg_name("张三");
-		group.setg_snum("711700");
-		this.entity=this.manager.save(group);
-	}
 	@Test	
-	public void testFindByFullname() {
-		List<Group> result=this.groupmanager.findByg_name("张");
-		assertNotNull(result);
-		assertEquals(1, result.size());
-		assertEquals("张三",result.get(0).getg_name());
-	}
-
-	@Test
-	public void testFindByPostcode() {
-		String G_snum = this.entity.getg_snum();
-		List<Group>result=this.groupmanager.findByg_snum(G_snum);
-		assertEquals(G_snum,result.get(0).getg_snum());
+	public void G_add()
+	{
+		List<Group> G=new ArrayList<Group>();
+		for(Long i=(long) 0;i<200;i++)
+		{
+			Group g=new Group();
+			g.setG_name("G_name"+i);
+			g.setG_age(19);
+			g.setG_snum("201608040"+i);
+			String s;
+			if(i%2==0)
+				s="women";
+				else
+					s="man";
+			g.setG_sex(s);
+			String c;
+			if(i<100)
+				c="软件161";
+				else
+					c="软件162";
+			g.setG_cla(c);
+			this.groupmanager.save(g);
+		}
 	}
 }

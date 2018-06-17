@@ -6,66 +6,72 @@ import javax.persistence.Table;
 
 import edu.zut.cs.software.yibuzhiyao.base.domain.BaseEntity;
 
-@Table(name="G_form")
+@Table(name="Group_form")
 @Entity
 public class Group  extends BaseEntity {
 
 	
 	private static final long serialVersionUID = -4376674977047164142L;
 	
-	@Column(name="G_name")
-	String G_name;
-	
-	@Column(name="G_snum")
-	String G_snum;
-	
-	@Column(name="G_age")
-	int G_age;
-	
-	@Column(name="G_sex")
-	String G_sex;
-	
-	@Column(name="G_cla")
-	String G_cla;
-	public String getG_name()
+	@Column(name="g_name")
+	String g_name;
+	@Column(name="g_Major")
+	String g_Major;
+	@Column(name="g_snum")
+	String g_snum;
+	@Column(name="g_age")
+	int g_age;
+	@Column(name="g_sex")
+	String g_sex;
+	@Column(name="g_cla")
+	String g_cla;
+	public String getg_name()
 	{
-		return G_name;
+		return g_name;
 	}
-	public void setG_name(String G_name)
+	public void setg_name(String g_name)
 	{
-		this.G_name=G_name;
+		this.g_name=g_name;
 	}
-	public String getG_sex()
+	public String getg_sex()
 	{
-		return G_sex;
+		return g_sex;
 	}
-	public void setG_sex(String G_sex)
+	public void setg_sex(String g_sex)
 	{
-		this.G_sex=G_sex;
+		this.g_sex=g_sex;
 	}
-	public String getG_snum()
+	public String getg_snum()
 	{
-		return G_snum;
+		return g_snum;
 	}
-	public void setG_snum(String G_snum)
+	public void setg_snum(String g_snum)
 	{
-		this.G_snum=G_snum;
+		this.g_snum=g_snum;
 	}
-	public int getG_sage()
+	public int getg_sage()
 	{
-		return G_age;
+		return g_age;
 	}
-	public void setG_age(int G_age)
+	public void setg_age(int g_age)
 	{
-		this.G_age=G_age;
+		this.g_age=g_age;
 	}
-	public String getG_cla()
+	public String getg_cla()
 	{
-		return G_cla;
+		return g_cla;
 	}
-	public void setG_cla(String G_cla)
+	public void setg_cla(String g_cla)
 	{
-		this.G_cla=G_cla;
+		this.g_cla=g_cla;
 	}
-	
+	public String getg_Major()
+	{
+		return g_Major;
+	}
+	public void setg_Major(String g_Major)
+	{
+		this.g_Major=g_Major;
+	}
+
 }

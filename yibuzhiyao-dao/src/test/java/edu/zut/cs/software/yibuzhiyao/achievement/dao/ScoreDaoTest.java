@@ -11,7 +11,13 @@ import edu.zut.cs.software.yibuzhiyao.base.dao.GenericDaoTestCase;
 public class ScoreDaoTest extends GenericDaoTestCase<Long, Score, ScoreDao>{
 	@Autowired
 	ScoreDao scoredao;
-
+	/*@Test
+	void test() {
+		String username = "yang929";
+		Score query = new Score();
+		Score expectedScore = new Score();
+		Score r = new Score();
+	}*/
 	@Test
 	public void testFindAll() {
 

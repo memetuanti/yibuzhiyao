@@ -22,7 +22,6 @@
     <listener>
         <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
     </listener>
-
     <filter>
         <filter-name>SpringOpenEntityManagerInViewFilter</filter-name>
         <filter-class>org.springframework.orm.jpa.support.OpenEntityManagerInViewFilter</filter-class>
@@ -97,6 +96,6 @@
     </servlet-mapping>
 
     <welcome-file-list>
-        <welcome-file>main/index.html</welcome-file>
+        <welcome-file>student/index.html</welcome-file>
     </welcome-file-list>
 </web-app>

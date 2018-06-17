@@ -10,7 +10,7 @@ Ext.define('score.model.ScoreModel', {
 		type : 'string',
 		sortable : true
 	}, {
-		name : 'db',
+		name : 'DB',
 		type : 'int',
 		sortable : true		
 	}, {
@@ -25,7 +25,11 @@ Ext.define('score.model.ScoreModel', {
 		name : 'age',
 		type : 'int',
 		sortable : true
-	},{
+	},/* {
+		name : 'score',
+		type : 'int',
+		sortable : true
+	},*/{
 		name : 'dateCreated',
 		type : 'date',
 		dateFormat : 'time',

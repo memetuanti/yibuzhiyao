@@ -34,7 +34,7 @@ Ext.define('student.view.StudentEdit', {
 				xtype : 'textfield',
 				name : 'score',
 				fieldLabel : '分数'
-			},   ]
+			}]
 		} ];
 		this.buttons = [ {
 			text : '保存',

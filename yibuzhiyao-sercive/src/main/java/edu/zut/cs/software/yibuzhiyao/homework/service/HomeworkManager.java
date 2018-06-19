@@ -4,10 +4,11 @@ import java.util.List;
 
 import edu.zut.cs.software.yibuzhiyao.base.service.GenericManager;
 import edu.zut.cs.software.yibuzhiyao.homework.domain.Homework;
+import edu.zut.cs.software.yibuzhiyao.information.domain.Student;
 
 public interface HomeworkManager extends GenericManager<Homework,Long>{
 	
-	List<Homework> findAll();
+	List<Homework> findByNum(String num);
 
-	Homework findbyHomework_list_name(String studentname);
+	List<Homework> findbyHomework_list_name(String homework_list_name);
 }

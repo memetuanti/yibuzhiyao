@@ -60,7 +60,7 @@ public class TeachEntityGenerator extends GenericGenerator {
 						s.setEndtime(value);
 				
 					}
-						
+						//ZUIXIN
 				}
 			}
 			this.managementList.add(s);

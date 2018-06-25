@@ -104,15 +104,10 @@
       <el-menu-item index="3-3-3">总成绩</el-menu-item>
     </el-submenu>
   </el-submenu>
-  <el-submenu index="4">
+ <el-submenu index="4">
   <div slot="title">作业管理</div>
-  <el-submenu index="4-1">
-      <div slot="title">查询作业</div>
-      <el-menu-item index="4-1-1">平时作业</el-menu-item>
-      <el-menu-item index="4-1-2">课设作业</el-menu-item>
-      </el-submenu>
-   <el-menu-item index="4-2"  disabled>作业录入</el-menu-item>
-  <el-menu-item index="4-3"><a href="http://localhost:8080/yibuzhiyao-web/homework/index.html" target="_blank">全部作业</a></el-menu-item>
+  <el-menu-item index="4-1"><a  href="http://localhost:8080/yibuzhiyao-web/homework/inqutreHomework.html" target="_blank">查询作业</a></el-menu-item>
+  <el-menu-item index=”4-2” ><a href="http://localhost:8080/yibuzhiyao-web/homework/index.html" target="_blank">全部作业</a></el-menu-item>
   </el-submenu>
   <el-submenu index="5">
   <div slot="title">考勤管理</div>

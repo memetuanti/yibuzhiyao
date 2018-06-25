@@ -56,14 +56,20 @@ public class TeachEntityGenerator extends GenericGenerator {
 					if (j == 2) {
 						s.setHomework_teacher(value);
 						System.out.println("第三列是"+row.getCell(j).getStringCellValue());}
-					if (j == 3) 
-					{
+//					if (j == 3) 
+//					{
 //						System.out.println("日期列的格式是"+row.getCell(j).getStringCellValue());
-						Date date = new Date();
-						SimpleDateFormat sdf = new SimpleDateFormat("yyyy年MM月dd日");
-						sdf.parse(row.getCell(j).getStringCellValue());
-						s.setHomework_end_time(sdf.parse(row.getCell(j).getStringCellValue()));
-						System.out.println(sdf.parse(row.getCell(j).getStringCellValue()));
+//						Date date = new Date();
+//						SimpleDateFormat sdf = new SimpleDateFormat("yyyy年MM月dd日");
+//						sdf.parse(row.getCell(j).getStringCellValue());
+//						s.setHomework_end_time(sdf.parse(row.getCell(j).getStringCellValue()));
+//						System.out.println(sdf.parse(row.getCell(j).getStringCellValue()));
+//						
+//					
+//					}
+					if (j == 3) {
+						s.setHomework_end_time(value);
+						System.out.println("第四列是"+row.getCell(j).getStringCellValue());
 					}
 					if (j == 4)
 					{

@@ -1,6 +1,6 @@
 Ext.define('homework.model.HomeworkModel', {
 	extend : 'Ext.data.Model',
-	alias : 'widget.HomeworkModel',
+	alias : 'widget.homeworkModel',
 	fields : [{
 		name : 'num',
 		type : 'String',
@@ -15,8 +15,9 @@ Ext.define('homework.model.HomeworkModel', {
 		sortable : true
 	}, {
 		name : 'homework_end_time',
-		type : 'date',
-		dateFormat : 'time',
+		type : 'String',
+//		type : 'Date',
+//		dateFormat : 'time',
 		sortable : true
 	}, {
 		name : 'homework_state',

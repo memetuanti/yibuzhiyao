@@ -10,7 +10,7 @@ Ext.define('homework.view.HomeworkEdit', {
 			height : 300,
 			width : 300,
 			border : false,
-			items : [ /*{
+			items : [ {
 				xtype : 'textfield',
 				name : 'num',
 				fieldLabel : '作业次数'
@@ -35,8 +35,8 @@ Ext.define('homework.view.HomeworkEdit', {
 				xtype : 'textfield',
 				name : 'homework_score',
 				fieldLabel : '作业分数'
-			}*/
-				{
+			}
+				/*{
 					xtype : 'textfield',
 					name : 'teskname',
 					fieldLabel : '科目名称'
@@ -48,7 +48,7 @@ Ext.define('homework.view.HomeworkEdit', {
 					xtype : 'textfield',
 					name : 'endtime',
 					fieldLabel : '结束时间'
-				}]
+				}*/]
 		} ];
 		this.buttons = [ {
 			text : '保存',

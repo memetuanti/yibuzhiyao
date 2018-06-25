@@ -126,7 +126,7 @@ var homeworkGrid = new Ext.grid.GridPanel({
 			stripeRows : true,
 			width : 600,
 			title : '学生作业表',
-			columns : [/*{
+			columns : [{
 						text : "学号",
 						width : 120,
 						sortable : true,
@@ -168,7 +168,7 @@ var homeworkGrid = new Ext.grid.GridPanel({
 						sortable : true,
 						editor : textFieldEditor,
 						dataIndex : 'homework_score'
-					},*/{
+					},/*{
 						text : '科目名称',
 						width : 50,
 						sortable : true,
@@ -195,7 +195,7 @@ var homeworkGrid = new Ext.grid.GridPanel({
 						field : {
 							xtype : 'textfield'
 						}
-					},{
+					},*/{
 						text : "添加时间",
 						width : 150,
 						dataIndex : 'dateCreated',

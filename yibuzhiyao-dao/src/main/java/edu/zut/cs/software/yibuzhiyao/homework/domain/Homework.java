@@ -41,13 +41,13 @@ public class Homework extends BaseEntity{
 			this.homework_teacher = homework_teacher;
 		}
 
-		public Date getHomework_end_time() {
-			return homework_end_time;
-		}
-
-		public void setHomework_end_time(Date homework_end_time) {
-			this.homework_end_time = homework_end_time;
-		}
+//		public Date getHomework_end_time() {
+//			return homework_end_time;
+//		}
+//
+//		public void setHomework_end_time(Date homework_end_time) {
+//			this.homework_end_time = homework_end_time;
+//		}
 
 		public Boolean getHomework_state() {
 			return homework_state;
@@ -71,14 +71,26 @@ public class Homework extends BaseEntity{
 		@Column(name = "homework_teacher")
 		String homework_teacher;
 		
+//		@Column(name = "homework_end_time")
+//		String homework_end_time;
+		
 		@Column(name = "homework_end_time")
-		Date homework_end_time;
+		String homework_end_time;
 		
 		@Column(name = "homework_state")
 		Boolean homework_state;
 		
 		@Column(name = "homework_score")
 		int homework_score;
+
+		public String getHomework_end_time() {
+			return homework_end_time;
+		}
+
+		public void setHomework_end_time(String homework_end_time) {
+			this.homework_end_time = homework_end_time;
+		}
+		
 
 		
 		

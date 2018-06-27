@@ -31,6 +31,11 @@ public class HomeworkController extends GenericController<Homework, Long, Homewo
 		String result="/homework/resultHomework";
 		return result;
 	}
+	@RequestMapping(method = RequestMethod.GET, value = "/newHomework.html")
+	public String newhomework() {
+		String result="/homework/newHomework";
+		return result;
+	}
 	@Autowired
 	public void setHomeworkManager(HomeworkManager homeworkManager) {
 		this.homeworkManager = homeworkManager;

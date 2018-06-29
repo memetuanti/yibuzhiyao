@@ -20,17 +20,37 @@ Ext.define('score.view.ScoreEdit', {
 				fieldLabel : '姓名'
 			}, {
 				xtype : 'textfield',
-				name : 'db',
-				fieldLabel : '数据库'
+				name : 'first',
+				fieldLabel : '第一次上机'
 			}, {
 				xtype : 'textfield',
-				name : 'javaee',
-				fieldLabel : 'javaee'
+				name : 'second',
+				fieldLabel : '第二次上机'
 			},{
 				xtype : 'textfield',
-				name : 'math',
-				fieldLabel : '数学'
-			}, ]
+				name : 'third',
+				fieldLabel : '第三次上机'
+			},{
+				xtype : 'textfield',
+				name : 'fourth',
+				fieldLabel : '第四次上机'
+			},{
+				xtype : 'textfield',
+				name : 'fifth',
+				fieldLabel : '第五次上机'
+			},{
+				xtype : 'textfield',
+				name : 'attendance',
+				fieldLabel : '考勤成绩'
+			},{
+				xtype : 'textfield',
+				name : 'j2design',
+				fieldLabel : '课设成绩'
+			},{
+				xtype : 'textfield',
+				name : 'total',
+				fieldLabel : '总成绩'
+			},]
 		} ];
 		this.buttons = [ {
 			text : '保存',

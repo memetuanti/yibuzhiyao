@@ -11,15 +11,35 @@ Ext.define('score.ScoreModel', {		//ziji
 						type : 'string',
 						sortable : true
 					}, {
-						name : 'DB',
+						name : 'first',
 						type : 'int',
 						sortable : true
 					}, {
-						name : 'javaee',
+						name : 'second',
 						type : 'int',
 						sortable : true
 					}, {
-						name : 'math',
+						name : 'third',
+						type : 'int',
+						sortable : true
+					}, {
+						name : 'fourth',
+						type : 'int',
+						sortable : true
+					}, {
+						name : 'fifth',
+						type : 'int',
+						sortable : true
+					}, {
+						name : 'attendance',
+						type : 'int',
+						sortable : true
+					}, {
+						name : 'j2design',
+						type : 'int',
+						sortable : true
+					}, {
+						name : 'total',
 						type : 'int',
 						sortable : true
 					},{
@@ -35,7 +55,7 @@ Ext.define('score.ScoreModel', {		//ziji
 					}]
 		});
 
-var pageSize = 20;
+var pageSize = 80;
 
 var store = new Ext.data.Store({
 			autoLoad : true,
@@ -81,25 +101,7 @@ var textFieldEditor = {
 	maxText : '最多输入{0}个字符！'
 }
 
-/*var genderFieldEditor = {
-	xtype : 'combo',
-	triggerAction : 'all',
-	forceSelection : true,
-	displayField : 'label',
-	valueField : 'id',
-	mode : 'local',
-	store : {
-		xtype : 'jsonstore',
-		fields : ['id', 'label'],
-		data : [{
-					id : '男',
-					label : '男'
-				}, {
-					id : '女',
-					label : '女'
-				}]
-	}
-}*/
+
 var rowEditing = Ext.create('Ext.grid.plugin.RowEditing', {
 			listeners : {
 				cancelEdit : function(rowEditing, context) {
@@ -141,24 +143,60 @@ var scoreGrid = new Ext.grid.GridPanel({
 							xtype : 'textfield'
 						}
 					}, {
-						text : "数据库",
+						text : "第一次上机",
 						width : 80,
 						sortable : true,
 						editor : textFieldEditor,
-						dataIndex : 'DB'
+						dataIndex : 'first'
 					},{
-						text : "javaee",
+						text : "第二次上机",
 						width : 50,
 						sortable : true,
-						dataIndex : 'javaee',
+						dataIndex : 'second',
 						editor : genderFieldEditor
 					}, {
-						text : "数学",
+						text : "第三次上机",
 						width : 50,
 						sortable : true,
 						editor : textFieldEditor,
-						dataIndex : 'math'
+						dataIndex : 'third'
 					}, {
+						text : "第三次上机",
+						width : 50,
+						sortable : true,
+						editor : textFieldEditor,
+						dataIndex : 'third'
+					},{
+						text : "第四次上机",
+						width : 50,
+						sortable : true,
+						editor : textFieldEditor,
+						dataIndex : 'fourth'
+					},{
+						text : "第五次上机",
+						width : 50,
+						sortable : true,
+						editor : textFieldEditor,
+						dataIndex : 'fifth'
+					},{
+						text : "考勤成绩",
+						width : 50,
+						sortable : true,
+						editor : textFieldEditor,
+						dataIndex : 'attendance'
+					},{
+						text : "课设成绩",
+						width : 50,
+						sortable : true,
+						editor : textFieldEditor,
+						dataIndex : 'j2design'
+					},{
+						text : "总成绩",
+						width : 50,
+						sortable : true,
+						editor : textFieldEditor,
+						dataIndex : 'total'
+					},{
 						text : "添加时间",
 						width : 150,
 						dataIndex : 'dateCreated',

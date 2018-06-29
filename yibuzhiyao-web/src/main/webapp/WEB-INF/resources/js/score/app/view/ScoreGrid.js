@@ -1,4 +1,4 @@
-var pageSize = 20;
+var pageSize = 80;
 
 var scoreStore = Ext.create('score.store.ScoreStore');
 
@@ -18,20 +18,45 @@ Ext.define('score.view.ScoreGrid', {
 		sortable : true,
 		dataIndex : 'name'
 	}, {
-		text : "数据库",
+		text : "第一次上机",
 		width : 80,
 		sortable : true,
-		dataIndex : 'db'
+		dataIndex : 'first'
 	}, {
-		text : " javaee",
+		text : " 第二次上机",
 		width : 80,
 		sortable : true,
-		dataIndex : 'javaee'
+		dataIndex : 'second'
 	}, {
-		text : "数学",
+		text : "第三次上机",
 		width : 80,
 		sortable : true,
-		dataIndex : 'math'
+		dataIndex : 'third'
+	} ,{
+		text : "第四次上机",
+		width : 80,
+		sortable : true,
+		dataIndex : 'third'
+	} ,{
+		text : "第五次上机",
+		width : 80,
+		sortable : true,
+		dataIndex : 'fifth'
+	} ,{
+		text : "考勤成绩",
+		width : 80,
+		sortable : true,
+		dataIndex : 'attendance'
+	} ,{
+		text : "课设成绩",
+		width : 80,
+		sortable : true,
+		dataIndex : 'j2design'
+	} ,{
+		text : "总成绩",
+		width : 80,
+		sortable : true,
+		dataIndex : 'total'
 	} , {
 		text : "添加时间",
 		width : 150,
@@ -64,4 +89,14 @@ Ext.define('score.view.ScoreGrid', {
 		displayMsg : '记录数：第{0}条 - 第{1}条，共 {2}条',
 		emptyMsg : "没有记录"
 	})
+});
+
+scoreStore.load({
+	callback : function(records, operation, successful) {
+		if (successful) {
+			console.log('department name:', records[0]);
+		} else {
+			console.log('the server reported an error');
+		}
+	}
 });

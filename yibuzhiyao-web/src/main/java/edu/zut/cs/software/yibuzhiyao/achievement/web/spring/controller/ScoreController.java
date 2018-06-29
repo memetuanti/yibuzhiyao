@@ -20,6 +20,11 @@ public class ScoreController  extends GenericController<Score, Long, ScoreManage
 		String result = "/score/index";
 		return result;
 	}
+	@RequestMapping(method = RequestMethod.GET, value = "/inqutrescore.html")
+	public String inqutrescore() {
+		String result = "/score/inqutrescore";
+		return result;
+	}
 	@Autowired
 	public void setScoreManager(ScoreManager scoreManager) {
 		this.scoreManager = scoreManager;

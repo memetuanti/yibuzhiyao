@@ -95,14 +95,9 @@
   </el-submenu>
   <el-submenu index="3">
     <div slot="title">成绩管理</div>
-    <el-menu-item index="3-1" >录入成绩</el-menu-item>
+    <el-menu-item index="3-1" disabled>成绩录入（功能开发中）</a></el-menu-item>
     <el-menu-item index="3-2"><a href="http://localhost:8080/yibuzhiyao-web/score/index.html" target="_blank">全部成绩</a></el-menu-item>
-    <el-submenu index="3-3">
-      <div slot="title">查询成绩</div>
-      <el-menu-item index="3-3-1">平时成绩</el-menu-item>
-      <el-menu-item index="3-3-2">课设成绩</el-menu-item>
-      <el-menu-item index="3-3-3">总成绩</el-menu-item>
-    </el-submenu>
+    <el-menu-item index="3-3"><a href="http://localhost:8080/yibuzhiyao-web/score/inqutrescore.html" target="_blank">成绩查询</a></el-menu-item>
   </el-submenu>
  <el-submenu index="4">
   <div slot="title">作业管理</div>

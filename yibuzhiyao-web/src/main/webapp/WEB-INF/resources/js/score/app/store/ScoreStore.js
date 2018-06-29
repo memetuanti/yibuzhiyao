@@ -1,4 +1,4 @@
-var pageSize = 20;
+var pageSize = 80;
 
 Ext.define('score.store.ScoreStore', {
 	extend : 'Ext.data.Store',

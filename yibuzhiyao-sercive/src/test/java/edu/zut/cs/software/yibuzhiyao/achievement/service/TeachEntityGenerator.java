@@ -56,13 +56,28 @@ public class TeachEntityGenerator extends GenericGenerator {
 					
 					if (j == 3) {
 						int value2 = Integer.parseInt(value1);
-						s.setDB(value2);}
+						s.setFirst(value2);}
 					if (j == 4) {
 						int value3 = Integer.parseInt(value1);
-						s.setJavaee(value3);}
+						s.setSecond(value3);}
 					if (j == 5) {
 						int value4 = Integer.parseInt(value1);
-						s.setMath(value4);}
+						s.setThird(value4);}
+					if (j == 6) {
+						int value5 = Integer.parseInt(value1);
+						s.setFourth(value5);}
+					if (j == 7) {
+						int value6 = Integer.parseInt(value1);
+						s.setFifth(value6);}
+					if (j == 8) {
+						int value7 = Integer.parseInt(value1);
+						s.setAttendance(value7);}
+					if (j == 9) {
+						int value8 = Integer.parseInt(value1);
+						s.setJ2design(value8);}
+					/*if (j == 10) {
+						int value9 = Integer.parseInt(value1);
+						s.setTotal(value9);}*/
 				}
 			}
 			this.scoreList.add(s);

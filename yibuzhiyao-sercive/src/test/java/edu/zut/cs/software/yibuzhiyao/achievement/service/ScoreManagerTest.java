@@ -2,15 +2,12 @@ package edu.zut.cs.software.yibuzhiyao.achievement.service;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
-import java.sql.Date;
-import java.util.ArrayList;
 import java.util.List;
 import org.junit.Before;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import edu.zut.cs.software.yibuzhiyao.achievement.domain.Score;
-import edu.zut.cs.software.yibuzhiyao.base.service.GenericGenerator;
 import edu.zut.cs.software.yibuzhiyao.base.service.GenericManagerTestCase;
 
 public class ScoreManagerTest extends GenericManagerTestCase<Long, Score, ScoreManager>{

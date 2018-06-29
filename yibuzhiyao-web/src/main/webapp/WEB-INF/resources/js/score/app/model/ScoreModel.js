@@ -10,19 +10,35 @@ Ext.define('score.model.ScoreModel', {
 		type : 'string',
 		sortable : true
 	}, {
-		name : 'db',
+		name : 'first',
 		type : 'int',
 		sortable : true		
 	}, {
-		name : 'javaee',
+		name : 'second',
 		type : 'int',
 		sortable : true
 	}, {
-		name : 'math',
+		name : 'third',
 		type : 'int',
 		sortable : true
 	}, {
-		name : 'age',
+		name : 'fourth',
+		type : 'int',
+		sortable : true
+	},{
+		name : 'fifth',
+		type : 'int',
+		sortable : true
+	},{
+		name : 'attendance',
+		type : 'int',
+		sortable : true
+	},{
+		name : 'j2design',
+		type : 'int',
+		sortable : true
+	},{
+		name : 'total',
 		type : 'int',
 		sortable : true
 	},{

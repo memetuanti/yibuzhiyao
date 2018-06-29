@@ -18,14 +18,37 @@ public class Score extends BaseEntity{
 		@Column(name = "num")
 		String num;
 		
-		@Column(name = "math")
-		int math;
+		@Column(name = "first")
+		int first;
 		
-		@Column(name = "DB")
-		int DB;
+		@Column(name = "second")
+		int second;
 		
-		@Column(name = "javaee")
-		int javaee;
+		@Column(name = "third")
+		int third;
+		
+		@Column(name = "fourth")
+		int fourth;
+		
+		@Column(name = "fifth")
+		int fifth;
+		
+		@Column(name = "attendance")
+		int attendance;
+		
+		@Column(name = "j2design")
+		int j2design;
+	
+		@Column(name = "total")
+		int total;
+
+		public String getName() {
+			return name;
+		}
+
+		public void setName(String name) {
+			this.name = name;
+		}
 
 		public String getNum() {
 			return num;
@@ -35,36 +58,70 @@ public class Score extends BaseEntity{
 			this.num = num;
 		}
 
-		public int getMath() {
-			return math;
+		public int getFirst() {
+			return first;
 		}
 
-		public void setMath(int math) {
-			this.math = math;
+		public void setFirst(int first) {
+			this.first = first;
 		}
 
-		public int getDB() {
-			return DB;
+		public int getSecond() {
+			return second;
 		}
 
-		public void setDB(int DB) {
-			this.DB = DB;
+		public void setSecond(int second) {
+			this.second = second;
 		}
 
-		public int getJavaee() {
-			return javaee;
+		public int getThird() {
+			return third;
 		}
 
-		public void setJavaee(int javaee) {
-			this.javaee = javaee;
-		}
-		public String getName() {
-			return name;
+		public void setThird(int third) {
+			this.third = third;
 		}
 
-		public void setName(String name) {
-			this.name = name;
+		public int getFourth() {
+			return fourth;
 		}
 
+		public void setFourth(int fourth) {
+			this.fourth = fourth;
+		}
+
+		public int getFifth() {
+			return fifth;
+		}
+
+		public void setFifth(int fifth) {
+			this.fifth = fifth;
+		}
+
+		public int getAttendance() {
+			return attendance;
+		}
+
+		public void setAttendance(int attendance) {
+			this.attendance = attendance;
+		}
+
+		public int getJ2design() {
+			return j2design;
+		}
+
+		public void setJ2design(int j2design) {
+			this.j2design = j2design;
+		}
+
+		public int getTotal() {
+			return total;
+		}
+
+		public void setTotal(int total) {
+			this.total = total;
+		}
+
+		
 		
 }

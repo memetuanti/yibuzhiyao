@@ -40,7 +40,7 @@ Ext.define('homework.Homework', {
 					}]
 		});
 
-var pageSize = 20;
+var pageSize = 80;
 
 var store = new Ext.data.Store({
 			autoLoad : true,

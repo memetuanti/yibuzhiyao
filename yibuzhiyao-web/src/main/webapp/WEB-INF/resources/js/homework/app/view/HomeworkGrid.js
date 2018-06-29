@@ -1,4 +1,4 @@
-var pageSize = 20;
+var pageSize = 80;
 
 var homeworkStore = Ext.create('homework.store.HomeworkStore');
 

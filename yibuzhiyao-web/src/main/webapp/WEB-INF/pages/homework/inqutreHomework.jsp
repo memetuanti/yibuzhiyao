@@ -179,7 +179,7 @@
         }
     });
     $.ajax({
-        url:server_context + '/homework/.json?_dc=1530084270505&page=1&start=0&limit=20',//实现跨域的URL路径
+        url:server_context + '/homework/.json?_dc=1530084270505&page=1&start=0&limit=80',//实现跨域的URL路径
         type:'GET',
         dataType:'json',
         timeout:3000,

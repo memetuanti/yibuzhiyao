@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>查询操作</title>
     <script type="text/javascript" src="https://unpkg.com/vue@2.3.4/dist/vue.js"></script>
 	<script src="${pageContext.request.contextPath}/resources/js/homework/jquery-3.2.1.min.js"></script>
@@ -35,9 +35,7 @@
             font-size: 15px;
             padding: 3px 3px 3px 8px;
         }
-        table th:first-child {
-            width: 30px;
-        }
+        
         .container,
         .st {
             width: 1000px;

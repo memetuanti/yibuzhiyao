@@ -65,7 +65,6 @@
 </style>
 
 
-
 <body>
 
 <h1 align="center">学生查询<sub>--Yibuzhiyao</sub></h1>
@@ -131,16 +130,8 @@
       <el-main>任务管理</el-main>
   </el-container>
 </el-container>
-<br><br>
-    &nbsp&nbsp&nbsp&nbsp<el-button type="info" >个人信息</el-button>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-    <el-button type="info">分组管理</el-button>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-    <el-button type="info">成绩管理</el-button>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-    <el-button type="info">作业管理</el-button>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-    <el-button type="info">考勤管理</el-button>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-    <el-button type="info">任务管理</el-button>
-
-
 </div>
+
 
 
 </body>

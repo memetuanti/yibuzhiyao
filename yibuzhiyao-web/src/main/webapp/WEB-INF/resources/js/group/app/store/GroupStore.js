@@ -1,4 +1,4 @@
-var pageSize = 20;
+var pageSize = 80;
 
 Ext.define('group.store.GroupStore', {
 	extend : 'Ext.data.Store',

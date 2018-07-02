@@ -48,10 +48,36 @@
             padding: 4px;
         }
         .container .add {
-            padding: 5px 15px;
+         	width: 100px;  
+       		padding:8px;  
+        	background-color: #428bca;  
+        	border-color: #357ebd;  
+        	color: #fff;  
+        	-moz-border-radius: 10px;  
+        	-webkit-border-radius: 10px;  
+        	border-radius: 10px; /* future proofing */  
+        	-khtml-border-radius: 10px; /* for old Konqueror browsers */  
+        	text-align: center;  
+        	vertical-align: middle;  
+        	border: 1px solid transparent;  
+        	font-weight: 900;  
+        	font-size:125%
         }
         .container .indexed {
-            padding: 5px 15px;
+           width: 140px;  
+       		padding:8px;  
+        	background-color: #428bca;  
+        	border-color: #357ebd;  
+        	color: #fff;  
+        	-moz-border-radius: 10px;  
+        	-webkit-border-radius: 10px;  
+        	border-radius: 10px; /* future proofing */  
+        	-khtml-border-radius: 10px; /* for old Konqueror browsers */  
+        	text-align: center;  
+        	vertical-align: middle;  
+        	border: 1px solid transparent;  
+        	font-weight: 900;  
+        	font-size:125%
         }
         .overlay {
             position: fixed;

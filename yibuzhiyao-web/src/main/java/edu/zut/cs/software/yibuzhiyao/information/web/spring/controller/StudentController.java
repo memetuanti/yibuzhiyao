@@ -21,11 +21,7 @@ public class StudentController  extends GenericController<Student, Long, Student
 		String result = "/student/index";
 		return result;
 	}
-	@RequestMapping(method = RequestMethod.GET, value = "/inqutrestudent.html")
-	public String inqutrestudent() {
-		String result = "/student/inqutrestudent";
-		return result;
-	}
+
 	@Autowired
 	public void setStudentManager(StudentManager studentManager) {
 		this.studentManager = studentManager;

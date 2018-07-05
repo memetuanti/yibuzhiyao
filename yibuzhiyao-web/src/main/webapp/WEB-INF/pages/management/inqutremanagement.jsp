@@ -1,19 +1,18 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<title>分组查询</title>
- 	<script type="text/javascript" src="https://unpkg.com/vue@2.3.4/dist/vue.js"></script>
-	<script src="${pageContext.request.contextPath}/resources/js/group/jquery-3.2.1.min.js"></script>
+    <meta charset="UTF-8">
+    <title>任务查询</title>
+    <script type="text/javascript" src="https://unpkg.com/vue@2.3.4/dist/vue.js"></script>
+	<script src="${pageContext.request.contextPath}/resources/js/management/jquery-3.2.1.min.js"></script>
     <script type="text/javascript">
 	var localObj = window.location;
 	var contextPath = localObj.pathname.split("/")[1];
 	var basePath = localObj.protocol + "//" + localObj.host + "/" + contextPath;
 	var server_context = basePath;
 </script>
-
 <script type="text/javascript" src="https://unpkg.com/vue@2.3.4/dist/vue.js"></script>
 
     <style type="text/css">
@@ -28,9 +27,6 @@
             margin-top: 10px;
             width: 100%;
         }
-         table th:first-child {
-            width: 30px;
-        }
         table td,
         table th {
             height: 30px;
@@ -39,8 +35,11 @@
             font-size: 15px;
             padding: 3px 3px 3px 8px;
         }
+        table th:first-child {
+            width: 30px;
+        }
         .container,
-         .st {
+        .st {
             width: 1000px;
             margin: 10px auto 0;
             font-size: 13px;
@@ -82,15 +81,14 @@
             
         }
     </style>
-
 </head>
-<body>
-<div class="st">
-<h1 align="center" >分组查询<sub>--Yibuzhiyao</sub></h1>
-</div>
-<div class="container" id="app">
+<body style="background-color:azure;>
+    <div class="st">
+        <h1 align="center">任务管理操作页面</h1>
+    </div>
+    <div class="container" id="app">
         <div>
-        
+         	
             <input type="text" placeholder="search" @input="search" list="cars" class="search">
             <datalist id="cars">
                 <option v-for="item in searchlist" :value="item"></option>
@@ -101,23 +99,18 @@
         <div>
             <table>
                 <tr>
-                <th>id</th>
-                    <th>学号</th>
-                    <th>姓名</th>
-                    <th>班级</th>
-                    <th>性别</th>
-                    <th>年龄</th>
-                    <th>分组</th>
-                    <th>操作</th>
+            <th>id</th>
+                    <th>考试科目</th>
+                    <th>开始时间</th>
+                    <th>结束时间</th>
                 </tr>
                 <tr v-cloak v-for="(item, index) of slist">
-                 <td>{{index+1}}</td>
-                    <td>{{item.g_snum}}</td>
-                    <td>{{item.g_name}}</td>
-                    <td>{{item.g_cla}}</td>
-                    <td>{{item.g_sex}}</td>
-                    <td>{{item.g_age}}</td>
-                     <td>{{item.g_Major}}</td>
+                   <td>{{index+1}}</td>
+                   
+                    <td>{{item.taskname}}</td>
+                    <td>{{item.starttime}}</td>
+                    <td>{{item.endtime}}</td>
+
                     <td><a href="javascript:;" @click="showOverlay(index)">修改</a> | <a href="javascript:;" @click="del(index)">删除</a></td>
                 </tr>
             </table>
@@ -133,34 +126,24 @@
                         <h2 class="title">新增 | 修改</h2>
                         <div class="content">
                         <table>
-                        <tr>
-                        <td>学号</td>
-                        <td><input type="text" v-model="modifylist.g_snum"></td>
-                        </tr>
-                        <tr>
-                        <td>姓名</td>
-                        <td><input type="text" v-model="modifylist.g_name"></td>
-                        </tr>
-                        <tr>
-                        <td>班级</td>
-                        <td><input type="text" v-model="modifylist.g_cla"></td>
+                       
+                        <td >考试科目</td>
+                        <td><input type="text" v-model="modifylist.taskname"></td>
                         </td>
                         </tr>
                         <tr>
-                        <td>性别</td>
-                        <td><input type="text" v-model="modifylist.g_sex"></td>
+                        <td>开始时间</td>
+                        <td><input type="text" v-model="modifylist.starttime"></td>
                         </td>
                         </tr>
                         <tr>
-                        <td>年龄</td>
-                        <td><input type="text" v-model="modifylist.g_age"></td>
+                        <td>结束时间</td>
+                        <td><input type="text" v-model="modifylist.endtime"></td>
                         </td>
                         </tr>
                         <tr>
-                        <td>分组</td>
-                        <td><input type="text" v-model="modifylist.g_Major"></td>
-                        </td>
-                        </tr>
+                       
+                        
                         </table>
                         <p>
                         <input type="button" @click="changeActive" value="取消">
@@ -184,16 +167,17 @@
         }
     });
     $.ajax({
-        url:server_context + '/group/.json?_dc=1530084270505&page=1&start=0&limit=80',//实现跨域的URL路径
+        url:server_context + '/management/.json?_dc=1530084270505&page=1&start=0&limit=80',//实现跨域的URL路径
+        		
         type:'GET',
         dataType:'json',
         timeout:3000,
         success:function(result){
-            alert("系统运行成功");
+            alert("欢迎来到查询系统！！！");
             app.list = result.content;
         },
         error:function(XMLHttpRequest, textStatus, errorThrown){
-            alert('服务器忙');
+            alert('服务器忙，请稍后');
             alert(textStatus+XMLHttpRequest.status);
         }
     });
@@ -233,12 +217,10 @@
             },
             add: function () {
                 this.selectedlist = {
-                	g_snum: '201608040234',
-                	g_name : '支友盟',
-                	g_cla : '软件162',
-                	g_sex : '男',
-                	g_age : '20',
-                	g_Major:'第五组'
+            
+                	taskname : '软件工程',
+                	starttime : '8：00',
+                	endtime : '9：00',
                 };
                 this.isActive = true;
             },
@@ -263,22 +245,12 @@
                     var ss = [];
                     // 过滤需要的数据
                     this.list.forEach(function (item) {
-                        if (item.g_snum.indexOf(v) > -1) {
-                            if (self.searchlist.indexOf(item.g_snum) == -1) {
-                                self.searchlist.push(item.g_snum);
+                        if (item.taskname.indexOf(v) > -1) {
+                            if (self.searchlist.indexOf(item.taskname) == -1) {
+                                self.searchlist.push(item.taskname);
                             }
                             ss.push(item);
-                        } else if (item.g_name.indexOf(v) > -1) {
-                            if (self.searchlist.indexOf(item.g_name) == -1) {
-                                self.searchlist.push(item.g_name);
-                            }
-                            ss.push(item);
-                        }else if (item.g_Major.indexOf(v) > -1) {
-                            if (self.searchlist.indexOf(item.g_Major) == -1) {
-                                self.searchlist.push(item.g_Major);
-                            }
-                            ss.push(item);
-                        }
+                        } 
                     });
                     this.setSlist(ss); // 将过滤后的数据给了slist
                 } else {
@@ -291,4 +263,5 @@
         }
     });
 </script>
+
 </html>

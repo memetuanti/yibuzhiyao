@@ -118,7 +118,7 @@ var studentGrid = new Ext.grid.GridPanel({
 						text : '科目名称',
 						width : 50,
 						sortable : true,
-						dataIndex : 'teskname',
+						dataIndex : 'teskname'
 							editor : textFieldEditor,
 							field : {
 								xtype : 'textfield'

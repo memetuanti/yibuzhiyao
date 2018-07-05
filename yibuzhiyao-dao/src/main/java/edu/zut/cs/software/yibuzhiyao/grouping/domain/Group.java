@@ -49,7 +49,7 @@ public class Group  extends BaseEntity {
 	{
 		this.g_snum=g_snum;
 	}
-	public int getg_sage()
+	public int getg_age()
 	{
 		return g_age;
 	}

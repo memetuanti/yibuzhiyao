@@ -14,8 +14,6 @@
 	var server_context = basePath;
 </script>
 
-<script type="text/javascript" src="https://unpkg.com/vue@2.3.4/dist/vue.js"></script>
-
     <style type="text/css">
         [v-cloak] {
             display: none

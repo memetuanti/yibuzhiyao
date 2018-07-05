@@ -1,4 +1,4 @@
-var pageSize = 80;
+var pageSize = 20;
 
 var groupStore = Ext.create('group.store.GroupStore');
 
@@ -69,14 +69,4 @@ Ext.define('group.view.GroupGrid', {
 		displayMsg : '记录数：第{0}条 - 第{1}条，共 {2}条',
 		emptyMsg : "没有记录"
 	})
-});
-
-groupStore.load({
-	callback : function(records, operation, successful) {
-		if (successful) {
-			console.log('department name:', records[0]);
-		} else {
-			console.log('the server reported an error');
-		}
-	}
 });

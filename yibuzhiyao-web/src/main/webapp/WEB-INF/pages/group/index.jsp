@@ -25,5 +25,6 @@
 </script>
 <script type="text/javascript"
 	src="${pageContext.request.contextPath}/resources/js/group/app.js"></script>
+
 </body>
 </html>

@@ -27,6 +27,11 @@ public class GroupController extends GenericController<Group,Long,GroupManager>{
 		String result="/group/inqutregroup";
 		return result;
 	}
+	@RequestMapping(method = RequestMethod.GET, value = "/resultgroup.html")
+	public String resultgroup() {
+		String result="/group/resultgroup";
+		return result;
+	}
 	 @Autowired
 	 public void setGroupManager(GroupManager groupmanager)
 	 {

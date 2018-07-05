@@ -43,7 +43,7 @@ Ext.define('group.GroupModel', {
 					}]
 		});
 
-var pageSize = 80;
+var pageSize = 20;
 
 var store = new Ext.data.Store({
 			autoLoad : true,
@@ -89,7 +89,25 @@ var textFieldEditor = {
 	maxText : '最多输入{0}个字符！'
 }
 
-
+var genderFieldEditor = {
+	xtype : 'combo',
+	triggerAction : 'all',
+	forceSelection : true,
+	displayField : 'label',
+	valueField : 'id',
+	mode : 'local',
+	store : {
+		xtype : 'jsonstore',
+		fields : ['id', 'label'],
+		data : [{
+					id : '男',
+					label : '男'
+				}, {
+					id : '女',
+					label : '女'
+				}]
+	}
+}
 var rowEditing = Ext.create('Ext.grid.plugin.RowEditing', {
 			listeners : {
 				cancelEdit : function(rowEditing, context) {
@@ -113,6 +131,11 @@ var groupGrid = new Ext.grid.GridPanel({
 			width : 600,
 			title : '学生基本信息列表',
 			columns : [{
+						text : 'ID',
+						width : 50,
+						sortable : true,
+						dataIndex : 'id'
+					}, {
 						text : "学号",
 						width : 120,
 						sortable : true,
@@ -233,6 +256,10 @@ var groupForm = new Ext.form.FormPanel({
 						fieldLabel : "姓名",
 						xtype : 'textfield',
 						name : 'g_name'
+					}, {
+						fieldLabel : "性别",
+						xtype : 'textfield',
+						name : 'g_sex'
 					}],
 			buttons : [{
 						xtype : 'button',

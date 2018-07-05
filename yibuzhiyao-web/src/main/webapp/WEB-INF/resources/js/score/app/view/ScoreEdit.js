@@ -50,7 +50,7 @@ Ext.define('score.view.ScoreEdit', {
 				xtype : 'textfield',
 				name : 'total',
 				fieldLabel : '总成绩'
-			}]
+			},]
 		} ];
 		this.buttons = [ {
 			text : '保存',

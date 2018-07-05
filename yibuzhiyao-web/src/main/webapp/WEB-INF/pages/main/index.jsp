@@ -65,6 +65,7 @@
 </style>
 
 
+
 <body>
 
 <h1 align="center">学生查询<sub>--Yibuzhiyao</sub></h1>
@@ -84,7 +85,7 @@
   active-text-color="#ffd04b">
   <el-submenu index="1">
   <div slot="title">个人信息</div>
-  <el-menu-item index="1-1">查询信息</el-menu-item>
+  <el-menu-item index="1-1" ><a href="http://localhost:8080/yibuzhiyao-web/student/inqutrestudent.html" target="_blank">查询信息</a></el-menu-item>
   <el-menu-item index="1-2" ><a href="http://localhost:8080/yibuzhiyao-web/student/index.html" target="_blank">全部信息</a></el-menu-item>
   </el-submenu>
   <el-submenu index="2">
@@ -130,8 +131,16 @@
       <el-main>任务管理</el-main>
   </el-container>
 </el-container>
-</div>
+<br><br>
+    &nbsp&nbsp&nbsp&nbsp<el-button type="info" >个人信息</el-button>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+    <el-button type="info">分组管理</el-button>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+    <el-button type="info">成绩管理</el-button>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+    <el-button type="info">作业管理</el-button>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+    <el-button type="info">考勤管理</el-button>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+    <el-button type="info">任务管理</el-button>
 
+
+</div>
 
 
 </body>

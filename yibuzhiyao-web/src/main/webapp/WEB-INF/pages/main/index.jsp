@@ -63,8 +63,6 @@
     line-height: 320px;
   }
 </style>
-
-
 <body>
 
 <h1 align="center">学生查询<sub>--Yibuzhiyao</sub></h1>
@@ -116,7 +114,6 @@
       <el-menu-item index="6-6-1">时间查询</el-menu-item>
     </el-submenu>
   <el-menu-item index="6-2"><a href="http://localhost:8080/yibuzhiyao-web/management/index.html" target="_blank">全部任务</a></el-menu-item>
-   <el-menu-item index="6-3"><a href="http://localhost:8080/yibuzhiyao-web/management/inqutremanagement.html" target="_blank">任务查询</a></el-menu-item>
   </el-submenu>
 </el-menu>
 	
@@ -131,10 +128,16 @@
       <el-main>任务管理</el-main>
   </el-container>
 </el-container>
+
+
+
+
+
+
+
+
+
 </div>
-
-
-
 </body>
 <!-- import Vue before Element -->
 <script src="https://unpkg.com/vue/dist/vue.js"></script>

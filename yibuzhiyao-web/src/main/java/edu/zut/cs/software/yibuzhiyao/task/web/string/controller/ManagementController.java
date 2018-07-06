@@ -21,12 +21,7 @@ public class ManagementController extends GenericController<Management, Long, Ma
 		String result = "/management/index";
 		return result;
 	}
-	@RequestMapping(method = RequestMethod.GET, value = "/inqutremanagement.html")
-	public String inqutremanagement() {
-		
-		String result = "/management/inqutremanagement";
-		return result;
-	}
+
 	@Autowired
 	public void setStudentManager(ManagementManager managementManager) {
 		this.managementManager = managementManager;

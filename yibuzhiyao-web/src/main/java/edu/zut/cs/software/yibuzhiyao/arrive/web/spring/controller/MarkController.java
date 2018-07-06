@@ -20,6 +20,12 @@ public class MarkController extends GenericController<Mark,Long,MarkManager>{
 		return result;
 	}
 	
+	@RequestMapping(method = RequestMethod.GET, value = "/inqutremark.html")
+	public String inqutremark() {
+		String result = "/mark/inqutremark";
+		return result;
+	}
+	
 	@Autowired
 	public void setMarkManager(MarkManager markManager) {
 		this.markManager=markManager;

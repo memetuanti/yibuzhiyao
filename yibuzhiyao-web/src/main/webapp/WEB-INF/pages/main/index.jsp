@@ -82,7 +82,7 @@
   active-text-color="#ffd04b">
   <el-submenu index="1">
   <div slot="title">个人信息</div>
-  <el-menu-item index="1-1">查询信息</el-menu-item>
+  <el-menu-item index="1-1"><a href="http://localhost:8080/yibuzhiyao-web/student/inqutrestudent.html" target="_blank">查询信息</a></el-menu-item>
   <el-menu-item index="1-2" ><a href="http://localhost:8080/yibuzhiyao-web/student/index.html" target="_blank">全部信息</a></el-menu-item>
   </el-submenu>
   <el-submenu index="2">
@@ -105,15 +105,12 @@
   <div slot="title">考勤管理</div>
   <el-menu-item index="5-1"><a href="http://localhost:8080/yibuzhiyao-web/mark/index.html" target="_blank">全部考勤</a></el-menu-item>
   <el-menu-item index="5-2"  disabled>考勤录入</el-menu-item>
-  <el-menu-item index="5-3">考勤分析</el-menu-item>
+  <el-menu-item index="5-3"><a href="http://localhost:8080/yibuzhiyao-web/mark/inqutremark.html" target="_blank">考勤查询</a></el-menu-item>
   </el-submenu>
   <el-submenu index="6">
   <div slot="title">任务管理</div>
-   <el-submenu index="6-1">
-      <div slot="title">查询任务</div>
-      <el-menu-item index="6-6-1">时间查询</el-menu-item>
-    </el-submenu>
-  <el-menu-item index="6-2"><a href="http://localhost:8080/yibuzhiyao-web/management/index.html" target="_blank">全部任务</a></el-menu-item>
+   <el-menu-item index="6-1"><a href="http://localhost:8080/yibuzhiyao-web/management/inqutremanagement.html" target="_blank">任务查询</a></el-menu-item>
+   <el-menu-item index="6-2"><a href="http://localhost:8080/yibuzhiyao-web/management/index.html" target="_blank">全部任务</a></el-menu-item>
   </el-submenu>
 </el-menu>
 	
